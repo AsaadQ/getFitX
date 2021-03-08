@@ -23,5 +23,6 @@ urlpatterns = [
     path('', include('Calories.url')),
     path('', include('accounts.url')),
     path('', include('workoutPlan.url')),
+path('', include('boards.url')),
 
 ]
