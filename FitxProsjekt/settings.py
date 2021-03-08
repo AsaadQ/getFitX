@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Calories.apps.CaloriesConfig',
     'accounts',
     'workoutPlan',
+    'boards'
 ]
 
 MIDDLEWARE = [

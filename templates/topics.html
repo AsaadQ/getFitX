@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+    <meta charset="UTF-8">
+    <title>{{ board.name }}</title>
+</head>
+<body>
+<div class="container">
+    <ol class="breadcrumb my-4">
+        <li class="breadcrumb-item shadow alert-info"><a href="{% url 'boards'%}"> Boards </a></li>
+        <li class="breadcrumb-item active shadow-lg">{{ board.name }}</li>
+
+    </ol>
+</div>
+<a href="{% url 'new_topic' board.pk%}" class="btn btn-success">Add a new Topic</a>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th>Topic</th>
+        <th>Created By</th>
+        <th>Posts</th>
+        <th>Views</th>
+        <th>Created Date</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for topic in board.topics.all %}
+        <tr>
+        <td>{{topic.subject }}</td>
+        <td>{{topic.created_by.username }}</td>
+        <td>0</td>
+        <td>0</td>
+        <td>{{ topic.created_dt }}</td>
+        </tr>
+
+    {% endfor %}
+    </tbody>
+</table>
+
+
+</body>
+</html>
