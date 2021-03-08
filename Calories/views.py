@@ -5,4 +5,4 @@ def calc(request):
     return render(request, 'kalori.html')
 
 def home(request):
-    return render(request, 'base.html')
+    return render(request, 'home.html')

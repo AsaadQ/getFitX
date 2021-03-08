@@ -1,0 +1,17 @@
+.liste{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+tbody tr:nth-child(2){
+    text-align: center;
+}
+.top th {
+color: white;
+background-color: #00d0ff;
+padding:5px
+}
+
+table, tr {
+  margin-left: auto;
+  margin-right: auto;
+}

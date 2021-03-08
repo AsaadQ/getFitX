@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hard</title>
+</head>
+<body>
+<h1>Hard</h1>
+
+<table>
+    <thead>
+        {% for list in workout_hard  %}
+    <tr>
+            <tr>
+                <th><strong>{{ list.dagen_hard }}</strong></th>
+            </tr>
+        <th>Exercise</th>
+        <th>Reps</th>
+        <th>Sets</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><strong>{{ list.muskel }}</strong></td>
+            <tr>
+                <td>{{ list.exercise_name }}</td>
+                    <td>{{ list.reps }}</td>
+        <td>{{ list.sets }}</td>
+            </tr>
+
+          </tr> <br>
+
+
+    {% endfor %}
+    </tbody>
+</table>
+
+
+
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic</title>
+    <link rel="stylesheet" href="{% static 'css/Plans/workoutbasic.css' %}">
+</head>
+<body>
+<h1>Basic</h1>
+
+<table>
+    <thead>
+        {% for list in workout_basic  %}
+            <tr>
+                <th><strong>{{ list.dagen_basic }}</strong></th>
+            </tr>
+    <tr class="top">
+
+        <th>Exercise</th>
+        <th>Reps</th>
+        <th>Sets</th>
+    </tr>
+    </thead>
+    <tbody>
+       <tr>
+        <td style="background-color: #F5F5F5 "><strong>{{ list.muskel }}</strong></td>
+       </tr>
+            <tr>
+            <td class="liste">{{ list.exercise_name }}</td>
+            <td class="liste">{{ list.reps }}</td>
+        <td class="liste">{{ list.sets }}</td>
+        </tr>
+            <br>
+
+
+    {% endfor %}
+    </tbody>
+</table>
+
+
+{{ list.dagen_basic }}
+
+
+</body>
+</html>
+{% endblock %}

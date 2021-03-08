@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ultra</title>
+</head>
+<body>
+<h1>Ultra Workout</h1>
+
+<table>
+    <thead>
+        {% for list in workout_ultra  %}
+    <tr>
+            <tr>
+                <th><strong>{{ list.dagen_ultra }}</strong></th>
+            </tr>
+        <th>Exercise</th>
+        <th>Reps</th>
+        <th>Sets</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><strong>{{ list.muskel }}</strong></td>
+            <tr>
+                <td>{{ list.exercise_name }}</td>
+                    <td>{{ list.reps }}</td>
+        <td>{{ list.sets }}</td>
+            </tr>
+
+          </tr> <br>
+
+
+    {% endfor %}
+    </tbody>
+</table>
+
+
+
+</body>
+</html>
+{% endblock %}

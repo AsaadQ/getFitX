@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="{% static 'css/Plans/workoutValg.css' %}">
+
+</head>
+<body>
+<div class="container">
+	<div class="box">
+            <a href="{% url 'basic'  %}">
+
+		<span></span>
+            <div class="content">
+			<h2>
+				Basic Workout
+			</h2>
+		</div>
+                    </a>
+
+    </div>
+
+
+	<div class="box">
+        <a href="{% url 'hard'  %}">
+
+		<span></span>
+		<div class="content">
+			<h2>
+				Hard Workout
+			</h2>
+		</div>
+            </a>
+
+	</div>
+
+	<div class="box">
+        <a href="{% url 'ultra'  %}">
+
+		<span></span>
+
+		<div class="content">
+			<h2>
+				Ultimate Workout
+			</h2>
+
+		</div>
+            </a>
+
+	</div>
+</div>
+
+</body>
+</html>
+{% endblock %}
