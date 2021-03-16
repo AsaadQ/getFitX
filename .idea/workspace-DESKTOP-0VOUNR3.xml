@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="783bc281-aafa-4662-a386-cea2221d61fe" name="Default Changelist" comment="matplan">
+      <change beforePath="$PROJECT_DIR$/.idea/FitxProsjekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FitxProsjekt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    </list>
+    <list id="c042ddfa-1588-441e-a25a-649ba3b0cea8" name="test nr 8" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1ojhHYdsVr8qCgd6jDpn7tOmhbx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asaad\OneDrive\arbeid\static" />
+      <recent name="C:\Users\asaad\OneDrive\arbeid\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asaad\OneDrive\arbeid\static\css" />
+      <recent name="C:\Users\asaad\OneDrive\arbeid\templates" />
+      <recent name="C:\Users\asaad\OneDrive\arbeid\templates\Plans" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django Server.fitx">
+    <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server" nameIsGenerated="true">
+      <module name="FitxProsjekt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="FitxProsjekt.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\asaad\PycharmProjects\django-ecommerce\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fitx" type="Python.DjangoServer" factoryName="Django server">
+      <module name="FitxProsjekt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="FitxProsjekt.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\asaad\PycharmProjects\django-ecommerce\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django Server.Unnamed" />
+      <item itemvalue="Django Server.fitx" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="783bc281-aafa-4662-a386-cea2221d61fe" name="Default Changelist" comment="" />
+      <changelist id="c042ddfa-1588-441e-a25a-649ba3b0cea8" name="test nr 8" comment="" />
+      <created>1613805819652</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613805819652</updated>
+      <workItem from="1613805820754" duration="3976000" />
+      <workItem from="1613828482795" duration="4861000" />
+      <workItem from="1614145268596" duration="3996000" />
+      <workItem from="1614163975489" duration="6546000" />
+      <workItem from="1614181970182" duration="1809000" />
+      <workItem from="1614227631758" duration="8518000" />
+      <workItem from="1614269085510" duration="4313000" />
+      <workItem from="1614336771014" duration="2089000" />
+      <workItem from="1614354760706" duration="1415000" />
+      <workItem from="1614423492107" duration="724000" />
+      <workItem from="1614435696458" duration="516000" />
+      <workItem from="1614626866310" duration="3616000" />
+      <workItem from="1614775691380" duration="553000" />
+      <workItem from="1614777672862" duration="671000" />
+      <workItem from="1614778391300" duration="310000" />
+      <workItem from="1614867839582" duration="790000" />
+      <workItem from="1615200604929" duration="5296000" />
+      <workItem from="1615304245899" duration="2215000" />
+      <workItem from="1615374811735" duration="2652000" />
+      <workItem from="1615535464425" duration="1909000" />
+    </task>
+    <task id="LOCAL−00001" summary="test nr 8">
+      <created>1615201406974</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1615201406974</updated>
+    </task>
+    <task id="LOCAL−00002" summary="test nr 8">
+      <created>1615202043111</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1615202043111</updated>
+    </task>
+    <task id="LOCAL−00003" summary="database">
+      <created>1615202982049</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1615202982049</updated>
+    </task>
+    <task id="LOCAL−00004" summary="database">
+      <created>1615203615631</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1615203615631</updated>
+    </task>
+    <task id="LOCAL−00005" summary="database">
+      <created>1615203748841</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1615203748841</updated>
+    </task>
+    <task id="LOCAL−00006" summary="database">
+      <created>1615204776233</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1615204776233</updated>
+    </task>
+    <task id="LOCAL−00007" summary="matplan">
+      <created>1615305564600</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1615305564600</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test nr 8" />
+    <MESSAGE value="test nr 10" />
+    <MESSAGE value="database" />
+    <MESSAGE value="matplan" />
+    <option name="LAST_COMMIT_MESSAGE" value="matplan" />
+  </component>
+</project>
