@@ -34,12 +34,20 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'home'  %}">Kalori Kalkolator</a>
         </li>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Hi, welcom back {{ user.username}}!!</a>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link  dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Welcome  {{ user.username }}
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
+            <a class="dropdown-item" href="{#  #}">My account</a>
+            <a class="dropdown-item" href="{#  #}">Change password</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
+          </div>
         </li>
       </ul>
-      <a href={% url 'logout' %}>Log out</a>
+
       {% else %}
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
@@ -55,9 +63,6 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'home'  %}">Kalori Kalkolator</a>
           </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Welcome, login or signup</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">

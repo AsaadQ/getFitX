@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 {% load static %}
 
 <html lang="en">
@@ -16,22 +15,10 @@
 
     </ol>
 </div>
-<form method="post">
+<form method="post" novalidate>
     {%csrf_token%}
+    {% include 'includes/form.html'%}
 
-    {{form.as_p}}
-
-
-
-    <!--  <div class="form-group">
-    <label>Subject</label>
-    <input type="text" name="subject" id="id_subject">
-    </div>
-    <div class="form-group">
-    <label>Message</label>
-    <textarea name="message" id="id_message"  rows="5"></textarea>
-    </div>
-    -->
     <button type="submit" class="btn btn-success">Add</button>
 </form>
 </body>
