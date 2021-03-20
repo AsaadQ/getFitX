@@ -23,7 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Calories.url')),
     path('', include('accounts.url')),
+    path('', include("workoutPlan.url")),
     path('', include('boards.url')),
-    url(r'^', include("workoutPlan.url")),
-
 ]

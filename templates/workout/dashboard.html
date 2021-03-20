@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block content %}
 <!DOCTYPE html>
 <html>
 
@@ -11,7 +15,7 @@
     <!-- Load Access to Django Static Files -->
     {% load static %}
     <!-- Fav Icon -->
-    <!--[if IE]><link rel="shortcut icon" href="{% static 'workout/images/fav.png' }"><![endif]-->
+    <!--[if IE]><link rel="shortcut icon" href="{% static 'workout/images/fav.png' %}"><![endif]-->
     <link rel="icon" href="{% static 'workout/images/fav.png' %}">
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="{% static 'workout/css/bootstrap.min.css' %}">
@@ -130,6 +134,8 @@
             </footer>
         </div>
     </div>
+        {% endblock %}
+
     <!-- Javascript files-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js">
@@ -139,6 +145,7 @@
     </script>
     <!-- <script src="{% static 'workout/javascript/Chart.min.js' %}"></script> -->
     <script src="{% static 'workout/javascript/front.js' %}"></script>
+
 </body>
 
 </html>

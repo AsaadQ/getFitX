@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 
 <head>
   <meta charset="utf-8">
@@ -11,7 +11,7 @@
   <!-- Load Access to Django Static Files -->
   {% load static %}
   <!-- Fav Icon -->
-  <!--[if IE]><link rel="shortcut icon" href="{% static 'workout/images/fav.png' }"><![endif]-->
+  <!--[if IE]><link rel="shortcut icon" href="{% static 'workout/images/fav.png' %}"><![endif]-->
   <link rel="icon" href="{% static 'workout/images/fav.png' %}">
   <!-- Bootstrap CSS-->
   <link rel="stylesheet" href="{% static 'workout/css/bootstrap.min.css' %}">
@@ -55,7 +55,6 @@
         </div>
         <ul class="right-menu list-inline no-margin-bottom">
           <li class="list-inline-item"><a href="#" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></li>
-          <li class="list-inline-item logout"><a id="logout" href="/user/logout" class="nav-link">Logout <i class="icon-logout"></i></a></li>
         </ul>
       </div>
     </nav>

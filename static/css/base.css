@@ -1,3 +1,39 @@
+.block {
+  padding: 20px;
+  background: #2d3035;
+  color: #8a8d93;
+  margin-bottom: 30px;
+}
+
+a.sasquatch-footer-link {
+	color: #8a8d93;
+}
+
+a.sasquatch-footer-link:hover {
+	background-color: #ff3f3f;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: rgba(255, 255, 255, 0.85);
+	/*color: white;*/
+	/*font-weight: bolder;*/
+	text-decoration: none;
+}
+
+a.sasquatch-footer-link:focus, a.sasquatch-footer-link:active {
+	color: #ff3f3f;
+	/*font-weight: bolder;*/
+	background-color: #2d3035;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+
 .site-footer {
 	background-color: #26272b;
 	padding: 45px 0 20px;
