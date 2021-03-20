@@ -93,8 +93,6 @@ def user_login(request):
 def login(request):
     """If GET, load login page, if POST, login user."""
 
-    if request.method == "GET":
-        return render(request, "workout/index.html")
 
     if request.method == "POST":
         # Validate login data:
