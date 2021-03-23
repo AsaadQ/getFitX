@@ -1,14 +1,8 @@
-from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login as auth_login, login, authenticate
-from django.urls import reverse_lazy
-from django.utils.decorators import method_decorator
-from django.views.generic import UpdateView
-#from .forms import SignUpForm
+from django.contrib.auth import login, authenticate
+from django.contrib import messages # access django's `messages` module.
 from django.contrib.auth.models import User
-
 
 # Create your views here.
 from accounts.forms import RegisterForm
@@ -21,7 +15,6 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             return redirect('home')
-
     return render(request, 'signup.html', {'form': form})
 '''
 
@@ -92,3 +85,74 @@ def user_login(request):
     else:
         # No post data availabe, let's just show the page to the user.
         return render(request, 'login.html')
+
+
+
+
+
+def login(request):
+    """If GET, load login page, if POST, login user."""
+
+
+    if request.method == "POST":
+        # Validate login data:
+        validated = User.objects.login(**request.POST)
+        try:
+            # If errors, reload login page with errors:
+            if len(validated["errors"]) > 0:
+                print("User could not be logged in.")
+                # Loop through errors and Generate Django Message for each with custom level and tag:
+                for error in validated["errors"]:
+                    messages.error(request, error, extra_tags='login')
+                # Reload login page:
+                return redirect("/")
+        except KeyError:
+            # If validation successful, set session, and load dashboard based on user level:
+            print("User passed validation and is logged in.")
+
+            # Set session to validated User:
+            request.session["_auth_user_id"] = validated["logged_in_user"].id
+
+            # Fetch dashboard data and load appropriate dashboard page:
+            return redirect("/dashboard")
+
+def register(request):
+    """If GET, load registration page; if POST, register user."""
+
+    if request.method == "GET":
+        return render(request, "workout/register.html")
+
+    if request.method == "POST":
+        # Validate registration data:
+        validated = User.objects.register(**request.POST)
+        # If errors, reload register page with errors:
+        try:
+            if len(validated["errors"]) > 0:
+                print("User could not be registered.")
+                # Loop through errors and Generate Django Message for each with custom level and tag:
+                for error in validated["errors"]:
+                    messages.error(request, error, extra_tags='registration')
+                # Reload register page:
+                return redirect("/user/register")
+        except KeyError:
+            # If validation successful, set session and load dashboard based on user level:
+            print("User passed validation and has been created.")
+            # Set session to validated User:
+            request.session["_auth_user_id"] = validated["logged_in_user"].id
+            # Load Dashboard:
+            return redirect('/dashboard')
+
+def logout(request):
+    """Logs out current user."""
+
+    try:
+        # Deletes session:
+        del request.session['_auth_user_id']
+        # Adds success message:
+        messages.success(request, "You have been logged out.", extra_tags='logout')
+
+    except KeyError:
+        pass
+
+    # Return to index page:
+    return redirect("/")

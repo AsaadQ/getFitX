@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block content %}
+
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FitnessTracker</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <!-- Load Access to Django Static Files -->
+  {% load static %}
+  <!-- Fav Icon -->
+  <!--[if IE]><link rel="shortcut icon" href="{% static 'workout/images/fav.png' %}"><![endif]-->
+  <link rel="icon" href="{% static 'workout/images/fav.png' %}">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="{% static 'workout/css/bootstrap.min.css' %}">
+  <!-- Font Awesome CSS-->
+  <link rel="stylesheet" href="{% static 'workout/css/font-awesome.min.css' %}">
+  <!-- Custom Font Icons CSS-->
+  <link rel="stylesheet" href="{% static 'workout/css/font.css' %}">
+  <!-- Google fonts - Muli-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+  <!-- theme stylesheet-->
+  <link rel="stylesheet" href="{% static 'workout/css/style.red.css' %}" id="theme-stylesheet">
+  <!-- Custom stylesheet - for your changes-->
+  <link rel="stylesheet" href="{% static 'workout/css/custom.css' %}">
+  <!-- Tweaks for older IEs-->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+
+<body>
+  <div class="d-flex align-items-stretch ">
+        <nav id="sidebar">
+            <div class="sidebar-header d-flex align-items-center ">
+                <div class="title">
+                    <h1 class="h5">{{user.username}}</h1>
+                    <p>{{user.level_name}}</p>
+                </div>
+            </div><span class="heading">Menu</span>
+            <ul class="list-unstyled">
+                <li class="active"><a href="/dashboard"><i class="icon-home"></i>Home</a></li>
+                <li><a href="/workout"><i class="fa fa-plus-square"></i>Workout</a></li>
+                <li><a href="/workouts"><i class="fa fa-th-list"></i>View All </a></li>
+            </ul>
+        </nav>
+    <div class="page-content mb-5">
+      <div class="page-header">
+        <div class="container-fluid">
+          <h2 class="h5 no-margin-bottom">Workout</h2>
+        </div>
+      </div>
+      <section class="no-padding-bottom">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12 text-light">
+              {% if workout.completed == False %}
+              <!-- End Workout -->
+              <form id="end-workout-form" action="/workout/{{ workout.id }}/complete" method="POST">
+                {% csrf_token %}
+                <!-- End Workout Button -->
+                <button id="end-workout" type="submit" class="btn btn-primary btn-lg float-right end-workout mb-4 ml-2">End Workout</button>
+              </form>
+              {% endif %}
+              <!-- Edit Workout Button -->
+              <a href="/workout/{{ workout.id }}/edit" class="btn btn-outline-info btn-lg float-right mb-4">Edit</a>
+              <!-- Workout Name -->
+              <h2 class="">{{ workout.name}}</h2>
+              <!-- Workout Subtitle -->
+              <small class="text-muted">{{ workout.created_at | date}}</small>
+              <!-- Workout Description -->
+              {% if workout.description %}
+              <p class="mt-5">{{ workout.description}}</p>
+              {% endif %}
+              <!-- Add Exercise -->
+              {% if workout.completed == False %}
+              <div class="card bg-dark add-exercise mb-5 mt-5" style="">
+                <div class="card-body">
+                  <form id="exercise-form" class="" action="/workout/{{ workout.id }}/exercise" method="POST">
+                    {% csrf_token %}
+                    <!-- Exercise Errors -->
+                    {% if messages %} {% for message in messages %} {% if message.tags == "exercise error" %}
+                    <div class="alert alert-danger alert-dismissable" role="alert">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                      <strong>Error!</strong> {{ message }}
+                    </div>
+                    {% endif %} {% endfor %} {% endif %}
+                    <!-- Exercise Name -->
+                    <div class="form-row">
+                      <div class="form-group col-md-4">
+                        <input id="name" type="text" name="name" required class="input-material form-control-lg mr-4" placeholder="Name">
+                      </div>
+                      <!-- Exercise Weight -->
+                      <div class="form-group col-md-4">
+                        <input id="weight" type="text" name="weight" class="input-material form-control-lg mr-4" placeholder="Weight (lbs)">
+                      </div>
+                      <!-- Exercise Repititions -->
+                      <div class="form-group col-md-4">
+                        <input id="repetitions" type="text" name="repetitions" class="input-material form-control-lg mr-4" placeholder="Repetitions">
+                      </div>
+                    </div>
+                    <!-- Add Workout Button -->
+                    <input id="add" type="submit" value="Add Exercise" class="btn btn-secondary btn-lg mt-3 btn-block">
+                  </form>
+                </div>
+              </div>
+              {% endif %}
+              <hr>
+              <!-- Exercises Table -->
+              {% if exercises %}
+              <div id="exercise-wrapper" class="mb-5">
+                <!-- <h4 class="card-title">Exercise Data</h4> -->
+                <table class="table table-striped">
+                  <tbody>
+                    {% for exercise in exercises %}
+                    <tr>
+                      <th scope="row">{{ exercise.name }}</th>
+                      <td>{{ exercise.weight|floatformat }} lbs</td>
+                      <td>{{ exercise.repetitions|floatformat}} reps</td>
+
+                      {% if workout.completed == False %}
+                      <td>
+                        <form id="delete-exercise-form" action="/workout/{{ workout.id }}/exercise" method="GET" class="p-0">
+                          {% csrf_token %}
+                          <input type="hidden" id="exercise_id" name="exercise_id" value="{{ exercise.id }}">
+                          <input type="hidden" id="workout_id" name="workout_id" value="{{ workout.id }}">
+                          <button id="delete-exercise" type="submit" class="btn btn-link btn-lg p-0"><i class="fa fa-remove delete-exercise"></i></button>
+                        </form>
+                      </td>
+                      {% endif %}
+
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- Javascript files-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js">
+  </script>
+  <script src="{% static 'workout/javascript/bootstrap.min.js' %}"></script>
+  <script src="{% static 'workout/javascript/jquery.cookie.js' %}">
+  </script>
+  <!-- <script src="{% static 'workout/javascript/Chart.min.js' %}"></script> -->
+  <script src="{% static 'workout/javascript/front.js' %}"></script>
+  <script src="{% static 'workout/javascript/exercise.js' %}"></script>
+</body>
+
+</html>
+    {% endblock %}
