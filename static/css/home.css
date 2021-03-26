@@ -2,8 +2,7 @@ body, html {
 height: 602px;
 margin: 0;
 background-image: url("../img/FitX.png");
-    width: 1200px;
-    background-repeat: round;
+    background-repeat: no-repeat;
 background-size: cover;
 }
 .bgimg {
