@@ -16,7 +16,6 @@ def dashboard(request):
     return render(request, "workout/dashboard.html")
 
 
-
 def new_workout(request):
     """If GET, load new workout; if POST, submit new workout."""
 
@@ -66,6 +65,7 @@ def new_workout(request):
         messages.info(request, "You must be logged in to view this page.", extra_tags="invalid_session")
         return redirect("/")
 
+
 def workout(request, id):
     """View workout."""
 
@@ -87,6 +87,7 @@ def workout(request, id):
         # If existing session not found:
         messages.info(request, "You must be logged in to view this page.", extra_tags="invalid_session")
         return redirect("/")
+
 
 def all_workouts(request):
     """Loads `View All` Workouts page."""
@@ -121,6 +122,7 @@ def all_workouts(request):
         messages.info(request, "You must be logged in to view this page.", extra_tags="invalid_session")
         return redirect("/")
 
+
 def exercise(request, id):
     """If POST, submit new exercise, if GET delete exercise."""
 
@@ -129,7 +131,6 @@ def exercise(request, id):
         user = User.objects.get(id=request.session["_auth_user_id"])
 
         if request.method == "GET":
-
             # Delete exercise by exercise id (from hidden field):
             Exercise.objects.get(id=request.GET["exercise_id"]).delete()
 
@@ -171,6 +172,7 @@ def exercise(request, id):
         # If existing session not found:
         messages.info(request, "You must be logged in to view this page.", extra_tags="invalid_session")
         return redirect("/")
+
 
 def edit_workout(request, id):
     """If GET, load edit workout; if POST, update workout."""
@@ -223,6 +225,7 @@ def edit_workout(request, id):
         messages.info(request, "You must be logged in to view this page.", extra_tags="invalid_session")
         return redirect("/")
 
+
 def delete_workout(request, id):
     """Delete a workout."""
 
@@ -242,6 +245,7 @@ def delete_workout(request, id):
         messages.info(request, "You must be logged in to view this page.", extra_tags="invalid_session")
         return redirect("/")
 
+
 def complete_workout(request, id):
     """If POST, complete a workout."""
 
@@ -255,7 +259,6 @@ def complete_workout(request, id):
             return redirect("/workout/" + id)
 
         if request.method == "POST":
-
             # Update Workout.completed field for this instance:
             workout = Workout.objects.get(id=id)
             workout.completed = True

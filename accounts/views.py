@@ -59,7 +59,7 @@ def user_register(request):
                 login(request, user)
 
                 # redirect to accounts page:
-                return HttpResponseRedirect('khara')
+                return redirect('/')
 
     # No post data availabe, let's just show the page.
     else:
@@ -90,31 +90,6 @@ def user_login(request):
 
 
 
-def login(request):
-    """If GET, load login page, if POST, login user."""
-
-
-    if request.method == "POST":
-        # Validate login data:
-        validated = User.objects.login(**request.POST)
-        try:
-            # If errors, reload login page with errors:
-            if len(validated["errors"]) > 0:
-                print("User could not be logged in.")
-                # Loop through errors and Generate Django Message for each with custom level and tag:
-                for error in validated["errors"]:
-                    messages.error(request, error, extra_tags='login')
-                # Reload login page:
-                return redirect("/")
-        except KeyError:
-            # If validation successful, set session, and load dashboard based on user level:
-            print("User passed validation and is logged in.")
-
-            # Set session to validated User:
-            request.session["_auth_user_id"] = validated["logged_in_user"].id
-
-            # Fetch dashboard data and load appropriate dashboard page:
-            return redirect("/dashboard")
 
 def register(request):
     """If GET, load registration page; if POST, register user."""
@@ -140,7 +115,7 @@ def register(request):
             # Set session to validated User:
             request.session["_auth_user_id"] = validated["logged_in_user"].id
             # Load Dashboard:
-            return redirect('/dashboard')
+            return redirect('/')
 
 def logout(request):
     """Logs out current user."""
