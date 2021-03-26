@@ -1,8 +1,13 @@
+from django.core.paginator import Paginator, PageNotAnInteger
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
-from django.contrib import messages # access django's `messages` module.
+from django.contrib import messages  # access django's `messages` module.
 from django.contrib.auth.models import User
+
+from workoutPlan.models import Workout
+from workoutPlan.views import all_workouts
+from .forms import NewUserForm, UserForm  # import UserForm and ProfileForm
 
 # Create your views here.
 from accounts.forms import RegisterForm
@@ -52,7 +57,7 @@ def user_register(request):
                 )
                 user.first_name = form.cleaned_data['first_name']
                 user.last_name = form.cleaned_data['last_name']
-               # user.phone_number = form.cleaned_data['phone_number']
+                # user.phone_number = form.cleaned_data['phone_number']
                 user.save()
 
                 # Login the user
@@ -66,6 +71,7 @@ def user_register(request):
         form = RegisterForm()
 
     return render(request, template, {'form': form})
+
 
 def user_login(request):
     if request.method == 'POST':
@@ -85,10 +91,6 @@ def user_login(request):
     else:
         # No post data availabe, let's just show the page to the user.
         return render(request, 'login.html')
-
-
-
-
 
 
 def register(request):
@@ -117,6 +119,7 @@ def register(request):
             # Load Dashboard:
             return redirect('/')
 
+
 def logout(request):
     """Logs out current user."""
 
@@ -131,3 +134,42 @@ def logout(request):
 
     # Return to index page:
     return redirect("/")
+
+
+def userpage(request):
+    user_form = UserForm(instance=request.user)
+    return render(request=request, template_name="Bruker/bruker.html",
+                  context={"user": request.user, "user_form": user_form})
+
+def all_workouts(request):
+    """Loads `View All` Workouts page."""
+
+    try:
+        # Check for valid session:
+        user = User.objects.get(id=request.session["_auth_user_id"])
+
+        workout_list = Workout.objects.filter(user__id=user.id).order_by('-id')
+
+        page = request.GET.get('page', 1)
+
+        paginator = Paginator(workout_list, 12)
+        try:
+            workouts = paginator.page(page)
+        except PageNotAnInteger:
+            workouts = paginator.page(1)
+        except EmptyPage:
+            workouts = paginator.page(paginator.num_pages)
+
+        # Gather any page data:
+        data = {
+            'user': user,
+            'workouts': workouts,
+        }
+
+        # Load dashboard with data:
+        return render(request, "workout/all_workouts.html", data)
+
+    except (KeyError, User.DoesNotExist) as err:
+        # If existing session not found:
+        messages.info(request, "You must be logged in to view this page.", extra_tags="invalid_session")
+        return redirect("/")
