@@ -34,13 +34,13 @@
           <a class="nav-link" href="#">Matplan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'dashboard' %}">trenningsplan</a>
+          <a class="nav-link" href="{% url 'dashboard' %}">Treningsplan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'boards'  %}">Blog</a>
+          <a class="nav-link" href="{% url 'boards'  %}">Blogg</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'home'  %}">Kalori Kalkolator</a>
+          <a class="nav-link" href="{% url 'home'  %}">C-kalkulator</a>
         </li>
 
           <li class="nav-item dropdown">
@@ -48,10 +48,10 @@
           Welcome  {{ user.username }}
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
-            <a class="dropdown-item" href="{% url 'userpage' %}">My account</a>
-            <a class="dropdown-item" href="{#  #}">Change password</a>
+            <a class="dropdown-item" href="{% url 'userpage' %}">Min side</a>
+            <a class="dropdown-item" href="{#  #}">Bytt passord</a>
             <div class="dropdown-divider "></div>
-            <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
+            <a class="dropdown-item" href="{% url 'logout' %}">Logg ut</a>
           </div>
         </li>
       </ul>
@@ -63,21 +63,21 @@
             <a class="nav-link" href="#">Matplan</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'dashboard' %}">trenningsplan</a>
+            <a class="nav-link" href="{% url 'dashboard' %}">Treningsplan</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'boards'  %}">Blog</a>
+            <a class="nav-link" href="{% url 'boards'  %}">Blogg</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'home'  %}">Kalori Kalkolator</a>
+            <a class="nav-link" href="{% url 'home'  %}">C-Kalkulator</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'user_register'  %}">sign up</a>
+            <a class="nav-link" href="{% url 'user_register'  %}">Registrer deg</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link navbar-nav" href="{% url 'login' %}">Log in</a>
+            <a class="nav-link navbar-nav" href="{% url 'login' %}">Logg på</a>
           </li>
         </ul>
         {% endif %}
