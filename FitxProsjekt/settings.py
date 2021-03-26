@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'accounts',
     'workoutPlan',
     'boards',
-    'widget_tweaks'
+    'widget_tweaks',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
