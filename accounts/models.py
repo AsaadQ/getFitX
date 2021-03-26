@@ -2,8 +2,11 @@ from django.db import models
 import re  # regex for email validation
 import bcrypt  # bcrypt for password encryption/decryption
 from decimal import *  # for decimal number purposes
+from django.contrib.auth.models import User
 
 # Create your models here.
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class UserManager(models.Manager):
@@ -194,3 +197,16 @@ class User(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = UserManager() # Adds additional instance methods to `User`
+
+
+class Profil(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    @receiver(post_save, sender=User)  # add this
+    def create_user_profile(sender, instance, created, **kwargs):
+        if created:
+            Profil.objects.create(user=instance)
+
+    @receiver(post_save, sender=User)  # add this
+    def save_user_profile(sender, instance, **kwargs):
+        instance.profile.save()

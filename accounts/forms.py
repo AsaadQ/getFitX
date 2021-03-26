@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 
 from django import forms
 
+from accounts.models import Profil
+
 
 class RegisterForm(forms.Form):
     username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
@@ -22,3 +24,15 @@ class SignUpForm(UserCreationForm):
         model=User
         fields = {'username','email','password1','password2'}
         '''
+
+
+class NewUserForm(UserCreationForm):
+    ...
+
+
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'email')
+
+
