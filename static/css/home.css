@@ -4,6 +4,7 @@ margin: 0;
 background-image: url("../img/FitX.png");
     background-repeat: no-repeat;
 background-size: cover;
+    background-color: dimgrey;
 }
 .bgimg {
 height: 100%;
