@@ -1,7 +1,7 @@
 body, html {
 height: 602px;
 margin: 0;
-background-image: url("../img/FitX.png");
+background-image: url("../img/fitx.PNG");
     background-repeat: no-repeat;
 background-size: cover;
     background-color: dimgrey;
@@ -16,16 +16,17 @@ font-family: "Courier New", Courier, monospace;
 font-size: 25px;
 }
 .bottomleft {
-position: absolute;
-bottom: 0;
-left: 16px;
+  margin: auto;
+  width: 85%;
+  border: 3px solid green;
+  padding: 310px;
 }
 .middle {
 position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-text-align: center;
+text-align: center
 }
 hr {
 margin: auto;
