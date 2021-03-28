@@ -4,6 +4,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib import messages  # access django's `messages` module.
 from django.contrib.auth.models import User
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.forms import PasswordChangeForm
+from django.urls import reverse_lazy
 
 from workoutPlan.models import Workout
 from workoutPlan.views import all_workouts
@@ -150,35 +153,10 @@ def userpage(request):
                                                                                 "user_form": user_form})
 
 
-def all_workouts(request):
-    """Loads `View All` Workouts page."""
+class PasswordChangeView(PasswordChangeView):
+    form_class = PasswordChangeForm
+    success_url = reverse_lazy('password_Endret')
 
-    try:
-        # Check for valid session:
-        user = User.objects.get(id=request.session["_auth_user_id"])
 
-        workout_list = Workout.objects.filter(user__id=user.id).order_by('-id')
-
-        page = request.GET.get('page', 1)
-
-        paginator = Paginator(workout_list, 12)
-        try:
-            workouts = paginator.page(page)
-        except PageNotAnInteger:
-            workouts = paginator.page(1)
-        except EmptyPage:
-            workouts = paginator.page(paginator.num_pages)
-
-        # Gather any page data:
-        data = {
-            'user': user,
-            'workouts': workouts,
-        }
-
-        # Load dashboard with data:
-        return render(request, "workout/all_workouts.html", data)
-
-    except (KeyError, User.DoesNotExist) as err:
-        # If existing session not found:
-        messages.info(request, "You must be logged in to view this page.", extra_tags="invalid_session")
-        return redirect("/")
+def password_Endret(request):
+    return render(request, 'Bruker/PasswordEndret.html')
