@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 from django import forms
 
-from accounts.models import Profil
 
 
 class RegisterForm(forms.Form):
