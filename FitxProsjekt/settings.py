@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'workoutPlan',
     'boards',
     'widget_tweaks',
-    'crispy_forms'
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
