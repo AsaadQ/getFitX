@@ -1,6 +1,5 @@
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.contrib import messages  # access django's `messages` module.
+from django.contrib import messages
 from .models import Workout, Exercise
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -14,7 +13,7 @@ def dashboard(request):
     return render(request, "workout/dashboard.html")
 
 
-def new_workout(request):
+def ny_Trening(request):
 
     try:
         user = User.objects.get(id=request.session['_auth_user_id'])
@@ -70,7 +69,7 @@ def workout(request, id):
         return redirect("/")
 
 
-def all_workouts(request):
+def alle_Trening(request):
 
     try:
         user = User.objects.get(id=request.session["_auth_user_id"])
@@ -214,7 +213,7 @@ def complete_workout(request, id):
             workout.completed = True
             workout.save()
 
-            print("Workout completed.")
+            print("Øvelst Fullført")
 
             return redirect('/workout/' + id)
 
