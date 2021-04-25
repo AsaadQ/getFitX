@@ -1,7 +1,7 @@
 from django.db import models
-from decimal import *  # for decimal number purposes
+from decimal import *
 from django.contrib.auth.models import User
-import re  # regex for email validation
+import re
 
 
 # Create your models here.
@@ -15,7 +15,6 @@ class WorkoutManager(models.Manager):
 
         errors = []
 
-
         # Hvis Navn er Mindre enn to bokstaver
         if len(kwargs["name"]) < 2:
             errors.append('Navn er Obligatorisk og må innholde mer enn to Bokstaver')
@@ -27,7 +26,6 @@ class WorkoutManager(models.Manager):
 
         if not WORKOUT_REGEX.match(kwargs["name"]):
             errors.append('Navn Må Innholde Bokstaver eller Tall.')
-
 
         # Notater
         if len(kwargs["description"]) < 2:
@@ -113,23 +111,18 @@ class ExerciseManager(models.Manager):
 
         errors = []
 
-
         # Alle Felt Må Være Fylt
         if not kwargs['name'] or not kwargs['weight'] or not kwargs['repetitions']:
             errors.append('Alle Felt Må Være Fylt!!')
 
-
-
         if len(kwargs["name"]) < 2:
             errors.append('Name is required and must be at least 2 characters long.')
-
 
         EXERCISE_REGEX = re.compile(
             r'^\s*[A-Za-z0-9!@#$%^&*\"\':;\/?,<.>()-_=+\]\[~`]+(?:\s+[A-Za-z0-9!@#$%^&*\"\':;\/?,<.>()-_=+\]\[~`]+)*\s*$')
 
         if not EXERCISE_REGEX.match(kwargs["name"]):
             errors.append('Name must contain letters, numbers and basic characters only.')
-
 
         # Konvertering av Tall i Vekt og Repitasjon Feltene
         try:
@@ -140,29 +133,22 @@ class ExerciseManager(models.Manager):
             if (kwargs["weight"] < 0) or (kwargs["repetitions"] < 0):
                 errors.append('Vekt eller Reptisjon Felt må være Postivt tall.')
 
-
         except ValueError:
             # Evt Feil
             errors.append(
                 'Vekt eller Reptisjon Felt må være  KUN Postivt tall.')
 
-        # Check for validation errors:
-        # If none, create exercise and return created exercise:
+        # Om Evt Validering Feil
         if len(errors) == 0:
-            # Create new validated exercise:
             validated_exercise = {
                 "exercise": Exercise(name=kwargs["name"], weight=kwargs["weight"], repetitions=kwargs["repetitions"],
                                      workout=kwargs["workout"]),
             }
-            # Save new Workout:
             validated_exercise["exercise"].save()
-            # Return created Workout:
             return validated_exercise
         else:
-            # Else, if validation fails, print errors to console and return errors object:
             for error in errors:
-                print("Validation Error: ", error)
-            # Prepare data for controller:
+                print("Validering: ", error)
             errors = {
                 "errors": errors,
             }
