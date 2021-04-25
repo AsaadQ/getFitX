@@ -105,33 +105,20 @@ class WorkoutManager(models.Manager):
 
 
 class ExerciseManager(models.Manager):
-    """Additional instance method functions for `Exercise`"""
 
     def new(self, **kwargs):
         """
-        Validates and registers a new exercise.
-        Parameters:
-        - `self` - Instance to whom this method belongs.
-        - `**kwargs` - Dictionary object of exercise values from controller to be validated.
-        Validations:
-        - Name - Required; No fewer than 2 characters; letters, basic characters, numbers only
-        - Weight (lbs) - Required; Numbers only, Decimals allowed.
-        - Repetitions - Required; Numbers only, no Decimals.
+        Validere Og Registrere Ny Økt
         """
 
-        # Create empty errors list, which we'll return to generate django messages back in our controller:
         errors = []
 
-        # ---------------#
-        # -- REQUIRED: --#
-        # ---------------#
-        # Check if all fields are present:
-        if not kwargs['name'] or not kwargs['weight'] or not kwargs['repetitions']:
-            errors.append('All fields are required.')
 
-        # -----------#
-        # -- NAME: --#
-        # -----------#
+        # Alle Felt Må Være Fylt
+        if not kwargs['name'] or not kwargs['weight'] or not kwargs['repetitions']:
+            errors.append('Alle Felt Må Være Fylt!!')
+
+
         # Check if name is less than 2 characters:
         if len(kwargs["name"]) < 2:
             errors.append('Name is required and must be at least 2 characters long.')
