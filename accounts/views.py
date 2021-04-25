@@ -8,9 +8,8 @@ from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.forms import PasswordChangeForm
 from django.urls import reverse_lazy
 
-from workoutPlan.models import Workout
-from workoutPlan.views import all_workouts
-from .forms import NewUserForm, UserForm  # import UserForm and ProfileForm
+
+from .forms import UserForm  # import UserForm and ProfileForm
 
 # Create your views here.
 from accounts.forms import RegisterForm

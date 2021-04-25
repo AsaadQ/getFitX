@@ -25,10 +25,6 @@ class SignUpForm(UserCreationForm):
         '''
 
 
-class NewUserForm(UserCreationForm):
-    ...
-
-
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
