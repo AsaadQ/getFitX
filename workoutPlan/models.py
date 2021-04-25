@@ -56,52 +56,32 @@ class WorkoutManager(models.Manager):
 
     def update(self, **kwargs):
         """
-        Validates and updates a workout.
-        Parameters:
-        - `self` - Instance to whom this method belongs.
-        - `**kwargs` - Dictionary object of workout values from controller to be validated.
-        Validations:
-        - Name - Required; No fewer than 2 characters; letters, basic characters, numbers only
-        - Description - Required; letters, basic characters, numbers only
-        Developer Note:
-        - This section utilizes essentially the exact same validations as the `new()` method above (in this same WorkoutManager class). However, in this particular case, we're updating a record rather than creating one. At a later point, it might be good to refactor this section/these validations.
+        Validere og Oppdatere Eksisterende Trennings Økt
         """
 
-        # Create empty errors list, which we'll return to generate django messages back in our controller:
         errors = []
 
-        # -----------#
-        # -- NAME: --#
-        # -----------#
-        # Check if name is less than 2 characters:
+        # Hvis Navn er Mindre enn to bokstaver
         if len(kwargs["name"]) < 2:
-            errors.append('Name is required and must be at least 2 characters long.')
+            errors.append('Navn er Obligatorisk og må innholde mer enn to Bokstaver')
 
-        # Check if name contains letters, numbers and basic characters only:
-        '''
-        Note: The following regex pattern matches for strings which start or do not start with spaces, whom contain letters, numbers and some basic character sequences, followed by either more spaces or more characters. This prevents empty string submissions.
-        '''
+        # Ser Om Navnet Innholder Bokstaver eller Tall.
+
         WORKOUT_REGEX = re.compile(
             r'^\s*[A-Za-z0-9!@#$%^&*\"\':;\/?,<.>()-_=+\]\[~`]+(?:\s+[A-Za-z0-9!@#$%^&*\"\':;\/?,<.>()-_=+\]\[~`]+)*\s*$')
 
-        # Test name against regex object:
         if not WORKOUT_REGEX.match(kwargs["name"]):
-            errors.append('Name must contain letters, numbers and basic characters only.')
+            errors.append('Navn Må Innholde Bokstaver eller Tall.')
 
-        # ------------------#
-        # -- DESCRIPTION: --#
-        # ------------------#
-        # Check if description is less than 2 characters:
+        # Notater
+
         if len(kwargs["description"]) < 2:
-            errors.append('Description is required and must be at least 2 characters long.')
+            errors.append('Notater må innholde mer enn to bokstaver')
 
-        # Check if description contains letters, numbers and basic characters only:
-        # Test description against regex object (we'll just use WORKOUT_REGEX again since the pattern has not changed):
         if not WORKOUT_REGEX.match(kwargs["description"]):
-            errors.append('Description must contain letters, numbers and basic characters only.')
+            errors.append('Notater Må Innholde Bokstaver eller Tall.')
 
-        # Check for validation errors:
-        # If none, create workout and return new workout:
+        # Sjekk for Evt Feil
         if len(errors) == 0:
 
             # Update workout:
