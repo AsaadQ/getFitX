@@ -119,41 +119,32 @@ class ExerciseManager(models.Manager):
             errors.append('Alle Felt Må Være Fylt!!')
 
 
-        # Check if name is less than 2 characters:
+
         if len(kwargs["name"]) < 2:
             errors.append('Name is required and must be at least 2 characters long.')
 
-        # Check if name contains letters, numbers and basic characters only:
-        '''
-        Note: The following regex pattern matches for strings which start or do not start with spaces, whom contain letters, numbers and some basic character sequences, followed by either more spaces or more characters. This prevents empty string submissions.
-        '''
+
         EXERCISE_REGEX = re.compile(
             r'^\s*[A-Za-z0-9!@#$%^&*\"\':;\/?,<.>()-_=+\]\[~`]+(?:\s+[A-Za-z0-9!@#$%^&*\"\':;\/?,<.>()-_=+\]\[~`]+)*\s*$')
 
-        # Test name against regex object:
         if not EXERCISE_REGEX.match(kwargs["name"]):
             errors.append('Name must contain letters, numbers and basic characters only.')
 
-        # ---------------------------#
-        # -- WEIGHT & REPETITIONS: --#
-        # ---------------------------#
-        # Try converting weight and repetitions to floating numbers, rounded to tenth place:
+
+        # Konvertering av Tall i Vekt og Repitasjon Feltene
         try:
             kwargs["weight"] = round(float(kwargs["weight"]), 1)
             kwargs["repetitions"] = round(float(kwargs["repetitions"]), 1)
 
-            # Ensure weight and repetitions is a positive number:
+            # De bør være Positvit Tall
             if (kwargs["weight"] < 0) or (kwargs["repetitions"] < 0):
-                errors.append('Weight and repetitions must be a positive number.')
+                errors.append('Vekt eller Reptisjon Felt må være Postivt tall.')
 
-            # Ensure repetitions is a positive number:
-            # if (kwargs["repetitions"] < 0):
-            #     errors.append('Weight cannot be a negative number.')
 
         except ValueError:
-            # If value error, send error:
+            # Evt Feil
             errors.append(
-                'Weight and repetitions must be a positive number only, containing at most one decimal place.')
+                'Vekt eller Reptisjon Felt må være  KUN Postivt tall.')
 
         # Check for validation errors:
         # If none, create exercise and return created exercise:
