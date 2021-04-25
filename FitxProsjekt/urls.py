@@ -25,4 +25,6 @@ urlpatterns = [
     path('', include('accounts.url')),
     path('', include("workoutPlan.url")),
     path('', include('boards.url')),
+    path('', include('matplan.url')),
+
 ]
