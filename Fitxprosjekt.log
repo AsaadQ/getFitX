@@ -1,0 +1,82 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 6136
+"GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+"GET /kalori HTTP/1.1" 200 7748
+"GET /static/css/kalori.css HTTP/1.1" 200 368
+"GET /static/js/kalori.js HTTP/1.1" 200 2694
+"GET /dashboard HTTP/1.1" 200 5462
+C:\Users\asaad\OneDrive\arbeid\workoutPlan\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /login/ HTTP/1.1" 200 1887
+"POST /login/ HTTP/1.1" 200 1887
+"POST /login/ HTTP/1.1" 200 1887
+"GET /login/ HTTP/1.1" 200 1887
+"GET /dashboard HTTP/1.1" 200 5462
+"GET /signup HTTP/1.1" 200 3261
+"POST /signup HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 6405
+"GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+"GET /kalori HTTP/1.1" 200 7748
+C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 6405
+"GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+"GET /kalori HTTP/1.1" 200 7748
+"GET /kalori HTTP/1.1" 200 11526
+"GET /boards HTTP/1.1" 200 4688
+"GET /boards/1/ HTTP/1.1" 200 1725
+"GET /static/css/bootstrap.min.css HTTP/1.1" 200 155764
+C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /boards/1/topics/1 HTTP/1.1" 200 1679
+"GET /static/img/bruker.png HTTP/1.1" 404 1668
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 6405
+"GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+"GET /dashboard HTTP/1.1" 200 5736
+C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 6405
+"GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+"GET /dashboard HTTP/1.1" 200 5736
+"GET /dashboard HTTP/1.1" 200 5736
+"GET /boards HTTP/1.1" 200 4688
+"GET /boards/2/ HTTP/1.1" 200 678
+C:\Users\asaad\OneDrive\arbeid\workoutPlan\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\asaad\OneDrive\arbeid\workoutPlan\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\asaad\OneDrive\arbeid\workoutPlan\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 6405
+"GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+"GET /boards HTTP/1.1" 200 4688
+"GET /boards/2/ HTTP/1.1" 200 678
+C:\Users\asaad\OneDrive\arbeid\workoutPlan\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /boards/2/ HTTP/1.1" 200 678
+"GET /boards/2/ HTTP/1.1" 200 678
+"GET /boards/2/ HTTP/1.1" 200 678
+"GET /boards/2/ HTTP/1.1" 200 678
+"GET /boards HTTP/1.1" 200 4688
+"GET /boards/1/ HTTP/1.1" 200 1725
+"GET /boards HTTP/1.1" 200 4688
+"GET / HTTP/1.1" 200 6405
+"GET /static/img/fitx.PNG HTTP/1.1" 404 1662

@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-
+from django.utils.translation import gettext_lazy as _
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -123,3 +123,32 @@ STATICFILES_DIRS = [
 ]
 LOGOUT_REDIRECT_URL = 'khara'
 LOGIN_REDIRECT_URL = 'khara'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file2': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': 'FitxprosjektInfo.log',
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'Fitxprosjekt.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'file2'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+            'propagate': True,
+        },
+    },
+    'formatters': {
+        'standard': {
+            'format': ' %(asctime)s  %(created)f %(levelname)s %(name)s ',
+        },
+    },
+}

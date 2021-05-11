@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
-
+from django.conf.urls.i18n import i18n_patterns
 from accounts import views
 
 urlpatterns = [
@@ -26,5 +26,4 @@ urlpatterns = [
     path('', include("workoutPlan.url")),
     path('', include('boards.url')),
     path('', include('matplan.url')),
-
 ]

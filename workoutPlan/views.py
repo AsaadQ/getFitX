@@ -3,14 +3,16 @@ from django.contrib import messages
 from .models import Workout, Exercise
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
+from django.utils.translation import  get_language, activate, gettext
+from django.utils.translation import gettext as _
+import logging
 
 # Create your views here.
 
-def dashboard(request):
 
+def dashboard(request):
     # Load dashboard with data:
-    return render(request, "workout/dashboard.html")
+   return render(request, "workout/dashboard.html")
 
 
 def ny_Trening(request):
@@ -45,6 +47,7 @@ def ny_Trening(request):
 
                 id = str(validated['workout'].id)
                 return redirect('/workout/' + id)
+            logger.info(request.user.username)
 
     except (KeyError, User.DoesNotExist) as err:
         messages.info(request, "Du må være Logget inn..", extra_tags="invalid_session")
@@ -220,3 +223,13 @@ def complete_workout(request, id):
     except (KeyError, User.DoesNotExist) as err:
         messages.info(request, "Du må være logget inn.", extra_tags="invalid_session")
         return redirect("/")
+
+
+def translate(language):
+    nå_språk = get_language()
+    try:
+        activate(language)
+        text = gettext('hello')
+    finally:
+        activate(nå_språk)
+    return text
