@@ -1,0 +1,41 @@
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+TypeError: 'LogSetupMiddleware' object is not callable
+"GET / HTTP/1.1" 500 56514
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+TypeError: 'LogSetupMiddleware' object is not callable
+"GET / HTTP/1.1" 500 56651
+C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 6405
+"GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+"GET /kalori HTTP/1.1" 200 11526
+C:\Users\asaad\OneDrive\arbeid\workoutPlan\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\asaad\OneDrive\arbeid\workoutPlan\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /dashboard HTTP/1.1" 200 5736
+"GET /workout HTTP/1.1" 200 6291
+username
+"POST /workout HTTP/1.1" 302 0
+"GET /workout/12 HTTP/1.1" 200 7539
+C:\Users\asaad\OneDrive\arbeid\workoutPlan\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /workout HTTP/1.1" 200 6291
+asaad
+"POST /workout HTTP/1.1" 302 0
+"GET /workout/13 HTTP/1.1" 200 7539
+Watching for file changes with StatReloader
+"GET /dashboard HTTP/1.1" 200 5736
+"GET /workout HTTP/1.1" 200 6291
+asaad
+"POST /workout HTTP/1.1" 302 0
+asaad
+"GET /workout/14 HTTP/1.1" 200 7545

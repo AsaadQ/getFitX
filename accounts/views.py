@@ -86,7 +86,7 @@ def user_login(request):
             # Save session as cookie to login the user
             login(request, user)
             # Success, now let's login the user.
-            return render(request, 'login.html')
+            return render(request, '/')
         else:
             # Incorrect credentials, let's throw an error to the screen.
             return render(request, 'login.html', {'error_message': 'Incorrect username and / or password.'})

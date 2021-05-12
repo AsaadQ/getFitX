@@ -8,7 +8,7 @@ from django.utils.translation import gettext as _
 import logging
 
 # Create your views here.
-
+logger = logging.getLogger('django')
 
 def dashboard(request):
     # Load dashboard with data:
@@ -33,6 +33,7 @@ def ny_Trening(request):
                 "description": request.POST["description"],
                 "user": user
             }
+            logger.info(user)
 
             validated = Workout.objects.new(**workout)
 
@@ -47,7 +48,6 @@ def ny_Trening(request):
 
                 id = str(validated['workout'].id)
                 return redirect('/workout/' + id)
-            logger.info(request.user.username)
 
     except (KeyError, User.DoesNotExist) as err:
         messages.info(request, "Du må være Logget inn..", extra_tags="invalid_session")
@@ -64,7 +64,7 @@ def workout(request, id):
             'workout': Workout.objects.get(id=id),
             'exercises': Exercise.objects.filter(workout__id=id).order_by('-updated_at'),
         }
-
+        logger.info(user)
         return render(request, "workout/workout.html", data)
 
     except (KeyError, User.DoesNotExist) as err:
@@ -93,7 +93,7 @@ def alle_Trening(request):
             'user': user,
             'workouts': workouts,
         }
-
+        logger.info(user)
         return render(request, "workout/all_workouts.html", data)
 
     except (KeyError, User.DoesNotExist) as err:
@@ -120,6 +120,7 @@ def exercise(request, id):
                 "repetitions": request.POST["repetitions"],
                 "workout": Workout.objects.get(id=id),
             }
+            logger.info(user)
 
             print(exercise)
             validated = Exercise.objects.new(**exercise)
@@ -157,7 +158,7 @@ def edit_workout(request, id):
             'workout': Workout.objects.get(id=id),
             'exercises': Exercise.objects.filter(workout__id=id),
         }
-
+        logger.info(user)
         if request.method == "GET":
             return render(request, "workout/edit_workout.html", data)
 
@@ -192,6 +193,7 @@ def delete_workout(request, id):
         user = User.objects.get(id=request.session["_auth_user_id"])
 
         # Slett Økt
+        logger.info(user)
         Workout.objects.get(id=id).delete()
 
         return redirect('/dashboard')
@@ -207,6 +209,7 @@ def complete_workout(request, id):
 
     try:
         user = User.objects.get(id=request.session["_auth_user_id"])
+        logger.info(user)
 
         if request.method == "GET":
             return redirect("/workout/" + id)
@@ -224,12 +227,3 @@ def complete_workout(request, id):
         messages.info(request, "Du må være logget inn.", extra_tags="invalid_session")
         return redirect("/")
 
-
-def translate(language):
-    nå_språk = get_language()
-    try:
-        activate(language)
-        text = gettext('hello')
-    finally:
-        activate(nå_språk)
-    return text

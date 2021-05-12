@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'boards',
     'widget_tweaks',
     'crispy_forms',
+    'django_requestlogging',
 ]
 
 MIDDLEWARE = [
@@ -128,27 +130,26 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
-        'file2': {
-            'level': 'INFO',
-            'class': 'logging.FileHandler',
-            'filename': 'FitxprosjektInfo.log',
+        'console': {
+            'class': 'logging.StreamHandler',
         },
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'Fitxprosjekt.log',
-        },
+            'filename': 'debug.log'
+        }
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
     },
     'loggers': {
         'django': {
-            'handlers': ['file', 'file2'],
-            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
-            'propagate': True,
-        },
-    },
-    'formatters': {
-        'standard': {
-            'format': ' %(asctime)s  %(created)f %(levelname)s %(name)s ',
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propogate': True,
+            # 'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+            # 'propagate': False,
         },
     },
 }
