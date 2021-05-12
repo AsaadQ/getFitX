@@ -3,26 +3,29 @@ from django.contrib import messages
 from .models import Workout, Exercise
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.utils.translation import  get_language, activate, gettext
+from django.utils.translation import get_language, activate, gettext
 from django.utils.translation import gettext as _
 import logging
 
 # Create your views here.
 logger = logging.getLogger('django')
 
+
 def dashboard(request):
     # Load dashboard with data:
-   return render(request, "workout/dashboard.html")
+    user = User.objects.get(id=request.session['_auth_user_id'])
+    logger.info(user)
+    return render(request, "workout/dashboard.html")
 
 
 def ny_Trening(request):
-
     try:
         user = User.objects.get(id=request.session['_auth_user_id'])
 
         data = {
             'user': user,
         }
+        logger.info(user)
 
         if request.method == "GET":
             return render(request, "workout/add_workout.html", data)
@@ -33,7 +36,6 @@ def ny_Trening(request):
                 "description": request.POST["description"],
                 "user": user
             }
-            logger.info(user)
 
             validated = Workout.objects.new(**workout)
 
@@ -55,7 +57,6 @@ def ny_Trening(request):
 
 
 def workout(request, id):
-
     try:
         user = User.objects.get(id=request.session["_auth_user_id"])
 
@@ -73,7 +74,6 @@ def workout(request, id):
 
 
 def alle_Trening(request):
-
     try:
         user = User.objects.get(id=request.session["_auth_user_id"])
 
@@ -102,7 +102,6 @@ def alle_Trening(request):
 
 
 def exercise(request, id):
-
     try:
         user = User.objects.get(id=request.session["_auth_user_id"])
 
@@ -149,7 +148,6 @@ def exercise(request, id):
 
 
 def edit_workout(request, id):
-
     try:
         user = User.objects.get(id=request.session["_auth_user_id"])
 
@@ -188,7 +186,6 @@ def edit_workout(request, id):
 
 
 def delete_workout(request, id):
-
     try:
         user = User.objects.get(id=request.session["_auth_user_id"])
 
@@ -206,7 +203,6 @@ def delete_workout(request, id):
 
 
 def complete_workout(request, id):
-
     try:
         user = User.objects.get(id=request.session["_auth_user_id"])
         logger.info(user)
@@ -226,4 +222,3 @@ def complete_workout(request, id):
     except (KeyError, User.DoesNotExist) as err:
         messages.info(request, "Du må være logget inn.", extra_tags="invalid_session")
         return redirect("/")
-

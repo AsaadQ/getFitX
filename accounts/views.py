@@ -7,12 +7,14 @@ from django.contrib.auth.models import User
 from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.forms import PasswordChangeForm
 from django.urls import reverse_lazy
+import logging
 
 
 from .forms import UserForm  # import UserForm and ProfileForm
 
 # Create your views here.
 from accounts.forms import RegisterForm
+logger = logging.getLogger('django')
 
 '''
 def signup(request):
@@ -61,6 +63,7 @@ def user_register(request):
                 user.last_name = form.cleaned_data['last_name']
                 # user.phone_number = form.cleaned_data['phone_number']
                 user.save()
+                logger.info(user)
 
                 # Login the user
                 login(request, user)
@@ -86,7 +89,9 @@ def user_login(request):
             # Save session as cookie to login the user
             login(request, user)
             # Success, now let's login the user.
+            logger.info(user)
             return render(request, '/')
+
         else:
             # Incorrect credentials, let's throw an error to the screen.
             return render(request, 'login.html', {'error_message': 'Incorrect username and / or password.'})
@@ -119,6 +124,8 @@ def register(request):
             # Set session to validated User:
             request.session["_auth_user_id"] = validated["logged_in_user"].id
             # Load Dashboard:
+            logger.info(user)
+
             return redirect('/')
 
 
