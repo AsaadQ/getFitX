@@ -1,17 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Matpan</title>
-    <link rel="stylesheet" href="{%static 'css/Matplan/Planner.css'%}">
-</head>
-<body>
-    <div>
-        <p>asdasdasdasds</p>
-    </div>
+   {% block content %}
+       <link rel="stylesheet" href="{% static 'MatPlan/Planner.css' %}">
 
+         <h1>hei </h1>
 
-</body>
-</html>
+    {% endblock %}
