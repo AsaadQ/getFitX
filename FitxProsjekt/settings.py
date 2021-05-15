@@ -126,30 +126,68 @@ STATICFILES_DIRS = [
 LOGOUT_REDIRECT_URL = 'khara'
 LOGIN_REDIRECT_URL = 'khara'
 
+# LOGGING = {
+#    'version': 1,
+#    'disable_existing_loggers': False,
+#    'handlers': {
+#        'console': {
+#            'class': 'logging.StreamHandler',
+#        },
+#        'file': {
+#            'level': 'DEBUG',
+#            'class': 'logging.FileHandler',
+#            'filename': 'debug.log'
+#        }
+#    },
+#    'root': {
+#        'handlers': ['console'],
+#        'level': 'INFO',3
+#        },
+#    'loggers': {
+#        'django': {
+#            'handlers': ['file'],
+#            'level': 'INFO',
+#            'propogate': True,
+#           # 'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+#            # 'propagate': False,
+#        },
+#    },
+# }
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
         },
+    },
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'handlers': {
         'file': {
             'level': 'DEBUG',
+            'filters': ['require_debug_true'],
             'class': 'logging.FileHandler',
-            'filename': 'debug.log'
+            'filename': 'debug.log',
+            'formatter': 'verbose'
+        },
+        'file2': {
+            'level': 'INFO',
+            'filters': ['require_debug_true'],
+            'class': 'logging.FileHandler',
+            'filename': 'info.log',
+            'formatter': 'verbose'
         }
-    },
-    'root': {
-        'handlers': ['console'],
-        'level': 'INFO',
     },
     'loggers': {
         'django': {
-            'handlers': ['file'],
-            'level': 'INFO',
-            'propogate': True,
-            # 'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
-            # 'propagate': False,
+            'handlers': ['file', 'file2'],
+            'propagate': True,
+            'level': 'INFO'
         },
-    },
+    }
 }
