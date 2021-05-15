@@ -12,7 +12,7 @@ from .models import Board, Topic, Post
 def boards(request):
     boards = Board.objects.all()
     post =  Post.objects.all().count()
-    return render(request,'boards.html', {'boards': boards, 'post':post})
+    return render(request,'boards.html', {'boards': boards, 'post': post})
 
 
 def board_topics(request, board_id):

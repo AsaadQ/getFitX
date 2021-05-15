@@ -8,3 +8,90 @@ INFO 2021-05-15 18:23:02,695 basehttp 16260 4644 "GET /static/css/kalori.css HTT
 INFO 2021-05-15 18:23:02,702 basehttp 16260 15704 "GET /static/js/kalori.js HTTP/1.1" 200 2694
 INFO 2021-05-15 18:23:30,473 basehttp 16260 10964 "GET /boards HTTP/1.1" 200 4688
 INFO 2021-05-15 18:24:00,233 basehttp 16260 6832 "GET /kalori HTTP/1.1" 200 11526
+INFO 2021-05-15 18:29:31,346 autoreload 14852 16436 Watching for file changes with StatReloader
+INFO 2021-05-15 18:29:33,028 basehttp 14852 5044 "GET / HTTP/1.1" 200 6405
+WARNING 2021-05-15 18:29:33,254 basehttp 14852 5044 "GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+INFO 2021-05-15 18:29:36,521 basehttp 14852 14508 "GET /boards HTTP/1.1" 200 4688
+INFO 2021-05-15 18:29:38,176 basehttp 14852 14508 "GET /boards/1/ HTTP/1.1" 200 1725
+INFO 2021-05-15 18:29:38,239 basehttp 14852 14508 "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155764
+INFO 2021-05-15 18:29:40,660 basehttp 14852 11404 "GET /boards/1/new/ HTTP/1.1" 200 1303
+INFO 2021-05-15 18:30:54,572 basehttp 14852 656 "POST /boards/1/new/ HTTP/1.1" 302 0
+INFO 2021-05-15 18:30:54,632 basehttp 14852 656 "GET /boards/1/ HTTP/1.1" 200 1926
+INFO 2021-05-15 18:30:57,601 basehttp 14852 656 "GET /boards/1/topics/7 HTTP/1.1" 200 943
+WARNING 2021-05-15 18:30:57,661 basehttp 14852 656 "GET /static/img/bruker.png HTTP/1.1" 404 1668
+INFO 2021-05-15 18:31:01,799 basehttp 14852 13808 "GET /boards/1/topics/7/reply/ HTTP/1.1" 200 1353
+INFO 2021-05-15 18:31:08,399 basehttp 14852 13808 "POST /boards/1/topics/7/reply/ HTTP/1.1" 302 0
+INFO 2021-05-15 18:31:08,512 basehttp 14852 13808 "GET /boards/1/topics/7 HTTP/1.1" 200 1273
+WARNING 2021-05-15 18:31:08,584 basehttp 14852 13808 "GET /static/img/bruker.png HTTP/1.1" 404 1668
+INFO 2021-05-15 18:31:19,174 basehttp 14852 1992 "GET /boards/1/ HTTP/1.1" 200 1926
+INFO 2021-05-15 18:31:20,881 basehttp 14852 16064 "GET /boards HTTP/1.1" 200 4714
+INFO 2021-05-15 18:31:29,804 basehttp 14852 16064 "GET /boards/2/ HTTP/1.1" 200 678
+INFO 2021-05-15 18:34:14,238 basehttp 14852 6236 "GET /boards HTTP/1.1" 200 4676
+INFO 2021-05-15 18:34:24,443 basehttp 14852 15480 "GET /boards HTTP/1.1" 200 4714
+INFO 2021-05-15 18:34:33,234 basehttp 14852 9396 "GET /boards HTTP/1.1" 200 4592
+INFO 2021-05-15 18:34:39,269 basehttp 14852 9396 "GET /boards HTTP/1.1" 200 4714
+INFO 2021-05-15 18:35:33,307 basehttp 14852 16560 "GET /boards HTTP/1.1" 200 4724
+INFO 2021-05-15 18:35:51,788 basehttp 14852 11712 "GET /boards HTTP/1.1" 200 4714
+ERROR 2021-05-15 18:37:34,178 log 14852 10348 Internal Server Error: /boards
+Traceback (most recent call last):
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\asaad\OneDrive\arbeid\boards\views.py", line 15, in boards
+    return render(request,'boards.html', {'boards': boards, 'post':post})
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\loaders\base.py", line 29, in get_template
+    return Template(
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\asaad\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\django\template\base.py", line 522, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 28: 'endfor', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2021-05-15 18:37:34,181 basehttp 14852 10348 "GET /boards HTTP/1.1" 500 159953
+INFO 2021-05-15 18:37:43,725 basehttp 14852 10624 "GET /boards HTTP/1.1" 200 4552
+INFO 2021-05-15 18:37:45,293 basehttp 14852 10624 "GET /boards HTTP/1.1" 200 4552
+INFO 2021-05-15 18:39:06,563 basehttp 14852 11736 "GET /boards/1/ HTTP/1.1" 200 1926
+INFO 2021-05-15 18:39:12,948 basehttp 14852 11220 "GET /boards/2/ HTTP/1.1" 200 678
+INFO 2021-05-15 18:47:48,596 autoreload 14852 16436 C:\Users\asaad\OneDrive\arbeid\boards\views.py changed, reloading.
+INFO 2021-05-15 18:47:49,560 autoreload 15964 10208 Watching for file changes with StatReloader
+INFO 2021-05-15 18:47:53,660 views 15964 2872 asaad
+INFO 2021-05-15 18:47:53,684 basehttp 15964 2872 "GET /dashboard HTTP/1.1" 200 5736
+INFO 2021-05-15 18:48:07,899 views 15964 2872 asaad
+INFO 2021-05-15 18:48:07,912 basehttp 15964 2872 "GET /workout HTTP/1.1" 200 6291
+INFO 2021-05-15 18:48:25,620 views 15964 2872 asaad
+INFO 2021-05-15 18:48:25,626 basehttp 15964 2872 "GET /dashboard HTTP/1.1" 200 5736
