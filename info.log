@@ -115,3 +115,87 @@ INFO 2021-05-15 19:01:25,765 basehttp 15964 10388 "GET /user HTTP/1.1" 200 7347
 INFO 2021-05-15 19:01:39,223 basehttp 15964 9252 "GET /user HTTP/1.1" 200 7347
 INFO 2021-05-15 19:01:55,141 basehttp 15964 5808 "GET /user HTTP/1.1" 200 7347
 INFO 2021-05-15 19:03:26,003 basehttp 15964 17272 "GET /user HTTP/1.1" 200 7350
+INFO 2021-05-16 19:24:22,765 autoreload 19224 21776 Watching for file changes with StatReloader
+INFO 2021-05-16 19:24:25,358 basehttp 19224 18308 "GET / HTTP/1.1" 200 6136
+WARNING 2021-05-16 19:24:25,509 basehttp 19224 18308 "GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+INFO 2021-05-16 19:24:27,572 basehttp 19224 4540 "GET /Plans HTTP/1.1" 200 3629
+INFO 2021-05-16 19:24:28,233 basehttp 19224 4540 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 38
+ERROR 2021-05-16 19:24:29,138 log 19224 24172 Internal Server Error: /dashboard
+Traceback (most recent call last):
+  File "C:\Users\ahadd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ahadd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ahadd\OneDrive\Documents\GitHub\getFitX\workoutPlan\views.py", line 16, in dashboard
+    user = User.objects.get(id=request.session['_auth_user_id'])
+  File "C:\Users\ahadd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\contrib\sessions\backends\base.py", line 65, in __getitem__
+    return self._session[key]
+KeyError: '_auth_user_id'
+ERROR 2021-05-16 19:24:29,141 basehttp 19224 24172 "GET /dashboard HTTP/1.1" 500 68480
+INFO 2021-05-16 19:24:37,220 basehttp 19224 24172 "GET /boards HTTP/1.1" 200 4419
+INFO 2021-05-16 19:24:38,520 basehttp 19224 24172 "GET /kalori HTTP/1.1" 200 11257
+INFO 2021-05-16 19:24:40,688 basehttp 19224 8464 "GET /Plans HTTP/1.1" 200 3629
+INFO 2021-05-16 19:50:10,003 basehttp 19224 18716 "GET /Plans HTTP/1.1" 200 3733
+INFO 2021-05-16 19:50:10,043 basehttp 19224 18716 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 0
+INFO 2021-05-16 19:50:28,727 basehttp 19224 20096 "GET /Plans HTTP/1.1" 200 3721
+INFO 2021-05-16 19:50:28,821 basehttp 19224 20096 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 47
+INFO 2021-05-16 19:50:29,389 basehttp 19224 20096 "GET /Plans HTTP/1.1" 200 3721
+INFO 2021-05-16 19:50:29,477 basehttp 19224 20096 "GET /static/MatPlan/Planner.css HTTP/1.1" 304 0
+INFO 2021-05-16 19:50:38,833 basehttp 19224 19180 "GET /Plans HTTP/1.1" 200 3721
+INFO 2021-05-16 19:50:38,886 basehttp 19224 19180 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 50
+INFO 2021-05-16 19:50:56,030 basehttp 19224 22420 "GET /Plans HTTP/1.1" 200 3724
+INFO 2021-05-16 19:50:56,110 basehttp 19224 22420 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 50
+INFO 2021-05-16 19:51:17,256 basehttp 19224 6940 "GET /Plans HTTP/1.1" 200 3741
+INFO 2021-05-16 19:51:17,318 basehttp 19224 6940 "GET /static/MatPlan/Planner.css HTTP/1.1" 304 0
+INFO 2021-05-16 19:51:33,569 basehttp 19224 20624 "GET /Plans HTTP/1.1" 200 3741
+INFO 2021-05-16 19:51:33,677 basehttp 19224 20624 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 73
+INFO 2021-05-16 19:51:37,957 basehttp 19224 18304 "GET /Plans HTTP/1.1" 200 3741
+INFO 2021-05-16 19:51:38,023 basehttp 19224 18304 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 73
+INFO 2021-05-16 19:51:44,619 basehttp 19224 18304 "GET /kalori HTTP/1.1" 200 11257
+INFO 2021-05-16 19:51:45,296 basehttp 19224 18304 "GET /boards HTTP/1.1" 200 4419
+ERROR 2021-05-16 19:51:46,056 log 19224 18304 Internal Server Error: /dashboard
+Traceback (most recent call last):
+  File "C:\Users\ahadd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ahadd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ahadd\OneDrive\Documents\GitHub\getFitX\workoutPlan\views.py", line 16, in dashboard
+    user = User.objects.get(id=request.session['_auth_user_id'])
+  File "C:\Users\ahadd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\contrib\sessions\backends\base.py", line 65, in __getitem__
+    return self._session[key]
+KeyError: '_auth_user_id'
+ERROR 2021-05-16 19:51:46,060 basehttp 19224 18304 "GET /dashboard HTTP/1.1" 500 68481
+INFO 2021-05-16 19:51:48,859 basehttp 19224 18724 "GET /Plans HTTP/1.1" 200 3741
+INFO 2021-05-16 19:51:48,941 basehttp 19224 18724 "GET /static/MatPlan/Planner.css HTTP/1.1" 304 0
+INFO 2021-05-16 19:51:49,807 basehttp 19224 18724 "GET / HTTP/1.1" 200 6136
+WARNING 2021-05-16 19:51:49,872 basehttp 19224 18724 "GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+INFO 2021-05-16 19:51:57,215 basehttp 19224 21828 "GET /Plans HTTP/1.1" 200 3741
+INFO 2021-05-16 19:51:57,289 basehttp 19224 21828 "GET /static/MatPlan/Planner.css HTTP/1.1" 304 0
+INFO 2021-05-16 19:52:40,520 basehttp 19224 24368 "GET /Plans HTTP/1.1" 200 3801
+INFO 2021-05-16 19:52:40,556 basehttp 19224 24368 "GET /static/MatPlan/Planner.css HTTP/1.1" 304 0
+INFO 2021-05-16 19:52:59,369 basehttp 19224 7520 "GET /Plans HTTP/1.1" 200 3801
+INFO 2021-05-16 19:52:59,446 basehttp 19224 7520 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 147
+INFO 2021-05-16 19:53:10,982 basehttp 19224 5688 "GET /Plans HTTP/1.1" 200 3801
+INFO 2021-05-16 19:53:11,047 basehttp 19224 5688 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 124
+INFO 2021-05-16 19:55:32,716 basehttp 19224 9476 "GET /Plans HTTP/1.1" 200 3864
+INFO 2021-05-16 19:55:32,752 basehttp 19224 9476 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 189
+INFO 2021-05-16 19:55:49,061 basehttp 19224 9012 "GET /Plans HTTP/1.1" 200 3864
+INFO 2021-05-16 19:55:49,089 basehttp 19224 9012 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 209
+INFO 2021-05-16 19:55:55,101 basehttp 19224 9012 "GET /Plans HTTP/1.1" 200 3864
+INFO 2021-05-16 19:55:55,127 basehttp 19224 9012 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 211
+INFO 2021-05-16 19:56:09,392 basehttp 19224 9912 "GET /Plans HTTP/1.1" 200 3864
+INFO 2021-05-16 19:56:09,424 basehttp 19224 9912 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 230
+INFO 2021-05-16 19:56:23,265 basehttp 19224 5308 "GET /Plans HTTP/1.1" 200 3864
+INFO 2021-05-16 19:56:23,297 basehttp 19224 5308 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 229
+INFO 2021-05-16 19:56:46,714 basehttp 19224 1136 "GET /Plans HTTP/1.1" 200 3864
+INFO 2021-05-16 19:56:46,746 basehttp 19224 1136 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 226
+INFO 2021-05-16 19:56:52,354 basehttp 19224 18852 "GET /Plans HTTP/1.1" 200 3864
+INFO 2021-05-16 19:56:52,423 basehttp 19224 18852 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 227
+INFO 2021-05-16 19:56:57,300 basehttp 19224 20012 "GET /Plans HTTP/1.1" 200 3864
+INFO 2021-05-16 19:56:57,328 basehttp 19224 20012 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 228
+INFO 2021-05-16 19:57:02,633 basehttp 19224 20012 "GET /Plans HTTP/1.1" 200 3864
+INFO 2021-05-16 19:57:02,661 basehttp 19224 20012 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 227
+INFO 2021-05-16 19:58:52,819 basehttp 19224 22992 "GET /Plans HTTP/1.1" 200 4140
+INFO 2021-05-16 19:58:52,852 basehttp 19224 22992 "GET /static/MatPlan/Planner.css HTTP/1.1" 304 0
+INFO 2021-05-16 19:59:04,977 basehttp 19224 24224 "GET /Plans HTTP/1.1" 200 4140
+INFO 2021-05-16 19:59:05,009 basehttp 19224 24224 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 231

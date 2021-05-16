@@ -2,7 +2,23 @@
 {% load static %}
    {% block content %}
        <link rel="stylesheet" href="{% static 'MatPlan/Planner.css' %}">
+        <main>
+            <header class="MatplanInnledning">
+                <h1>Matplan</h1>
+                <p>Velg et av matplanene her fra listen</p>
+            </header>
+            <section class="Matplaner">
+                <div class="Matplan">
+                    <tr>
+                        <th rowspan="2">Matrett</th>
+                        <th colspan="2"></th>
+                        <th rowspan="2">Flighted</th>
+                    </tr>
 
-         <h1>hei </h1>
+                </div>
+            </section>
+
+        </main>
+
 
     {% endblock %}

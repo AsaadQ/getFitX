@@ -1,3 +1,14 @@
-h1{
-    background-color: #0c5460;
+.MatplanInnledning h1{
+    text-align: center;
+    padding-top: 2em;
+}
+.MatplanInnledning p{
+    text-align: center;
+}
+
+.Matplaner{
+    width: 90em;
+    height: 4em;
+    background-color: lightblue;
+    margin: auto;
 }
