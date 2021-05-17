@@ -174,7 +174,7 @@ class Exercise(models.Model):
     weight = models.DecimalField(max_digits=999, decimal_places=1)
     repetitions = models.DecimalField(max_digits=999, decimal_places=1)
     category = models.CharField(max_length=50,
-                                default="Strength Training")  # Add more categories in the future: ['Strength Training', 'Endurance Training', 'Balance', 'Flexibility']
+                                default="Strength Training")
     workout = models.ForeignKey(Workout, on_delete=models.CASCADE, default=None)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

@@ -8,3 +8,7 @@ from django.shortcuts import render
 
 def Planner(request):
     return render(request, 'MatPlan/Planner.html')
+
+
+def Over(request):
+    return render(request, 'MatPlan/Over.html')

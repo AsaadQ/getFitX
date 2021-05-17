@@ -124,7 +124,7 @@ def register(request):
             # Set session to validated User:
             request.session["_auth_user_id"] = validated["logged_in_user"].id
             # Load Dashboard:
-            logger.info(user)
+            logger.info(validated)
 
             return redirect('/')
 
