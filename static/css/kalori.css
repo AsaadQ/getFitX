@@ -22,5 +22,15 @@ table {
     font-weight: normal;
     font-size: initial;
 }
+.tekst table{
+    width: auto;
+    color: red;
+}
+@media screen and (max-width: 600px){
+    .tekst p {
+        width: 100%;
+    }
+
+}
 
 
