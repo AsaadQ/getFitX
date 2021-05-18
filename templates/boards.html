@@ -17,7 +17,7 @@
         <td><a href="{% url 'board_topics' board.pk  %}">{{ board.name }} </a>
         <small class="text-muted d-block">{{board.description}}</small>
         </td>
-        <td>{{post}}</td>  <!-- viktig å komme tilbake til den-->
+        <td>{{post}}</td>
         <td>{{board.topics.count}}</td>
     <td>
         {% for topic in board.topics.all %}
