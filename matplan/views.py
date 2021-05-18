@@ -12,3 +12,11 @@ def Planner(request):
 
 def Over(request):
     return render(request, 'MatPlan/Over.html')
+
+
+def Under(request):
+    return render(request, 'MatPlan/Under.html')
+
+
+def Vegen(request):
+    return render(request, 'MatPlan/Vegen.html')

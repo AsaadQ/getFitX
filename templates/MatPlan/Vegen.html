@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+   {% block content %}
 
-</body>
-</html>
+<link rel="stylesheet" href=" {% static 'MatPlan/over.css' %}">
+
+<p style="text-align: center;"><span style="font-size: large;"><strong>1999 kalorier</strong></span></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: left;"><span style="font-size: medium;"><strong>Frokost - 521 kalorier</strong></span></p>
+<p style="text-align: left;">250 ml soyamelk med 1/2 kopp (75 gram) havre og en stor banan.</p>
+<p><span style="font-size: medium;"><strong>Lunsj - 470 kalorier</strong></span></p>
+<p>En porsjon gulrot og r&oslash;dbetsalat med ristede valn&oslash;tter og 1/2 kopp kokt quinoa. Sammen med det, ha en kopp (200 g) spirede linser som blir kokt og kokt.</p>
+<p><strong><span style="font-size: medium;">Snack - 330 kalorier</span></strong></p>
+<p>Ha en stor banan, som inneholder mye kalium og andre viktige vitaminer som C og B6. Fyll p&aring; med to br&oslash;dskiver og to spiseskjeer hummus.</p>
+<p><strong><span style="font-size: medium;">Middag - 678 kalorier</span></strong></p>
+<p>En porsjon potetsalat sammen med en kopp kokt quinoa. Avslutt dagen med et glass soyamelk.</p>
+    {% endblock %}
