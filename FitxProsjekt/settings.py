@@ -25,7 +25,7 @@ SECRET_KEY = '$fp=f#2d&%ayr@v^%f!%5rqvc_6@d-jx-p_^*g@=x_j=*9q)r('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'fitx-app.herokuapp.com/']
 
 # Application definition
 
