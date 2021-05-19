@@ -29,7 +29,4 @@ urlpatterns = [
     path('', include("workoutPlan.url")),
     path('', include('boards.url')),
     path('', include('matplan.url')),
-    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
-    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
-
 ]
