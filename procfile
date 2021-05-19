@@ -1,1 +1,1 @@
-web: gunicorn FitxProsjekt.wsgi --log-file -
+web: gunicorn FitxProsjekt.wsgi
