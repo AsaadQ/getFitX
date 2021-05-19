@@ -1,1 +1,1 @@
-web: gunicorn FitxProsjekt.wsgi
+web: waitress-serve --port=$PORT {FitxProsjekt}.wsgi:application
