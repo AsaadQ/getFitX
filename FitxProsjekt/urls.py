@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
 from django.conf.urls.i18n import i18n_patterns
+from django.views.static import serve
+
 from accounts import views
 
 urlpatterns = [
@@ -26,4 +28,7 @@ urlpatterns = [
     path('', include("workoutPlan.url")),
     path('', include('boards.url')),
     path('', include('matplan.url')),
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
+
 ]
