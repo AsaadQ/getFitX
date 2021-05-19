@@ -881,3 +881,177 @@ INFO 2021-05-18 14:06:51,041 basehttp 1568 12240 "GET /kalori HTTP/1.1" 200 1112
 INFO 2021-05-18 14:06:51,137 basehttp 1568 12240 "GET /static/css/kalori.css HTTP/1.1" 304 0
 INFO 2021-05-18 14:06:55,133 basehttp 1568 12240 "GET /kalori HTTP/1.1" 200 11121
 INFO 2021-05-18 14:07:14,809 basehttp 1568 12240 "GET /kalori HTTP/1.1" 200 11121
+INFO 2021-05-18 14:09:15,031 basehttp 1568 12240 "GET /boards HTTP/1.1" 200 4445
+INFO 2021-05-18 14:09:17,031 basehttp 1568 12240 "GET /boards/1/ HTTP/1.1" 200 1926
+INFO 2021-05-18 14:09:17,156 basehttp 1568 12240 "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155764
+INFO 2021-05-18 14:09:17,531 basehttp 1568 12240 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-18 14:18:01,003 basehttp 1568 10068 "GET /boards/1/ HTTP/1.1" 200 1926
+INFO 2021-05-18 14:18:01,367 basehttp 1568 10068 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-18 14:35:57,867 autoreload 16960 14236 Watching for file changes with StatReloader
+INFO 2021-05-18 14:36:00,006 basehttp 16960 12240 "GET /boards/1/ HTTP/1.1" 200 2572
+INFO 2021-05-18 14:36:01,082 basehttp 16960 12240 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-18 14:36:09,340 basehttp 16960 588 "GET /boards HTTP/1.1" 200 4363
+INFO 2021-05-18 14:36:13,616 basehttp 16960 588 "GET /boards/1/ HTTP/1.1" 200 2572
+INFO 2021-05-18 14:36:14,386 basehttp 16960 588 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-18 14:36:15,909 basehttp 16960 588 "GET /boards/1/topics/1 HTTP/1.1" 200 2325
+WARNING 2021-05-18 14:36:16,254 basehttp 16960 588 "GET /static/img/bruker.png HTTP/1.1" 404 1668
+INFO 2021-05-18 14:36:16,748 basehttp 16960 15456 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-18 14:36:19,950 basehttp 16960 15456 "GET /boards/1/topics/1/reply/ HTTP/1.1" 302 0
+WARNING 2021-05-18 14:36:20,063 log 16960 15456 Not Found: /accounts/login/
+WARNING 2021-05-18 14:36:20,065 basehttp 16960 15456 "GET /accounts/login/?next=/boards/1/topics/1/reply/ HTTP/1.1" 404 6465
+INFO 2021-05-18 14:36:24,907 basehttp 16960 17468 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-18 14:36:26,772 basehttp 16960 17468 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-19 11:22:24,401 autoreload 5148 8956 Watching for file changes with StatReloader
+INFO 2021-05-19 11:22:28,017 basehttp 5148 9056 "GET / HTTP/1.1" 200 6405
+INFO 2021-05-19 11:22:28,090 basehttp 5148 9056 "GET /static/css/base.css HTTP/1.1" 200 3393
+INFO 2021-05-19 11:22:28,095 basehttp 5148 6436 "GET /static/css/home.css HTTP/1.1" 200 936
+WARNING 2021-05-19 11:22:28,523 basehttp 5148 6436 "GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+WARNING 2021-05-19 11:22:28,677 log 5148 9056 Not Found: /favicon.ico
+WARNING 2021-05-19 11:22:28,678 basehttp 5148 9056 "GET /favicon.ico HTTP/1.1" 404 6422
+INFO 2021-05-19 11:22:30,581 basehttp 5148 9056 "GET /Plans HTTP/1.1" 200 4926
+INFO 2021-05-19 11:22:30,674 basehttp 5148 9056 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 2249
+INFO 2021-05-19 11:22:32,048 basehttp 5148 9056 "GET /Over HTTP/1.1" 200 7136
+INFO 2021-05-19 11:22:32,124 basehttp 5148 9056 "GET /static/MatPlan/over.css HTTP/1.1" 200 0
+INFO 2021-05-19 11:22:36,012 basehttp 5148 9056 "GET /Under HTTP/1.1" 200 7000
+INFO 2021-05-19 11:22:38,493 views 5148 9056 asaad
+INFO 2021-05-19 11:22:38,504 basehttp 5148 9056 "GET /dashboard HTTP/1.1" 200 5736
+INFO 2021-05-19 11:22:40,303 views 5148 9056 asaad
+INFO 2021-05-19 11:22:40,307 basehttp 5148 9056 "GET /dashboard HTTP/1.1" 200 5736
+INFO 2021-05-19 11:22:41,455 views 5148 9056 asaad
+INFO 2021-05-19 11:22:41,466 basehttp 5148 9056 "GET /workout HTTP/1.1" 200 6291
+INFO 2021-05-19 11:22:42,597 views 5148 9056 asaad
+INFO 2021-05-19 11:22:42,627 basehttp 5148 9056 "GET /workouts HTTP/1.1" 200 7977
+INFO 2021-05-19 11:22:44,639 views 5148 9056 asaad
+INFO 2021-05-19 11:22:44,642 basehttp 5148 9056 "GET /workout HTTP/1.1" 200 6291
+INFO 2021-05-19 11:22:45,831 views 5148 9056 asaad
+INFO 2021-05-19 11:22:45,835 basehttp 5148 9056 "GET /dashboard HTTP/1.1" 200 5736
+INFO 2021-05-19 11:22:47,012 views 5148 9056 asaad
+INFO 2021-05-19 11:22:47,015 basehttp 5148 9056 "GET /dashboard HTTP/1.1" 200 5736
+INFO 2021-05-19 11:22:48,073 basehttp 5148 9056 "GET /kalori HTTP/1.1" 200 11390
+INFO 2021-05-19 11:22:48,134 basehttp 5148 9056 "GET /static/css/kalori.css HTTP/1.1" 200 510
+INFO 2021-05-19 11:22:48,144 basehttp 5148 17020 "GET /static/js/kalori.js HTTP/1.1" 200 2694
+INFO 2021-05-19 11:22:52,366 basehttp 5148 17020 "GET /boards HTTP/1.1" 200 4632
+INFO 2021-05-19 11:22:54,225 basehttp 5148 17020 "GET /boards/1/ HTTP/1.1" 200 2572
+INFO 2021-05-19 11:22:54,290 basehttp 5148 17020 "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155764
+INFO 2021-05-19 11:22:56,269 basehttp 5148 17020 "GET /boards/1/topics/3 HTTP/1.1" 200 1537
+WARNING 2021-05-19 11:22:56,327 basehttp 5148 17020 "GET /static/img/bruker.png HTTP/1.1" 404 1668
+INFO 2021-05-19 11:22:59,761 basehttp 5148 9056 "GET /boards/1/topics/6 HTTP/1.1" 200 1541
+WARNING 2021-05-19 11:22:59,818 basehttp 5148 9056 "GET /static/img/bruker.png HTTP/1.1" 404 1668
+INFO 2021-05-19 11:25:29,267 autoreload 5148 8956 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-19 11:25:30,185 autoreload 2744 13180 Watching for file changes with StatReloader
+INFO 2021-05-19 11:26:59,906 autoreload 2744 13180 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\urls.py changed, reloading.
+INFO 2021-05-19 11:27:00,870 autoreload 18332 9656 Watching for file changes with StatReloader
+INFO 2021-05-19 11:28:11,569 autoreload 18332 9656 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-19 12:16:47,124 autoreload 1152 13096 Watching for file changes with StatReloader
+INFO 2021-05-19 12:18:16,201 basehttp 1152 12092 "GET / HTTP/1.1" 200 6405
+WARNING 2021-05-19 12:18:16,567 basehttp 1152 12092 "GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+INFO 2021-05-19 12:18:18,638 basehttp 1152 12516 "GET /kalori HTTP/1.1" 200 11390
+INFO 2021-05-19 12:18:20,199 views 1152 12516 asaad
+INFO 2021-05-19 12:18:20,226 basehttp 1152 12516 "GET /dashboard HTTP/1.1" 200 5736
+INFO 2021-05-19 12:18:23,926 basehttp 1152 12516 "GET /password/ HTTP/1.1" 200 5003
+INFO 2021-05-19 12:18:27,709 basehttp 1152 12516 "GET /kalori HTTP/1.1" 200 11390
+INFO 2021-05-19 12:18:31,864 basehttp 1152 12516 "GET /user HTTP/1.1" 200 7350
+INFO 2021-05-19 12:24:54,548 autoreload 7076 11896 Watching for file changes with StatReloader
+INFO 2021-05-19 12:27:17,479 autoreload 15800 14624 Watching for file changes with StatReloader
+INFO 2021-05-19 12:36:27,190 autoreload 472 11136 Watching for file changes with StatReloader
+INFO 2021-05-19 12:39:42,359 autoreload 472 11136 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-19 12:39:44,179 autoreload 3184 11108 Watching for file changes with StatReloader
+INFO 2021-05-19 12:39:52,398 autoreload 3184 11108 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-19 12:39:54,046 autoreload 10412 5752 Watching for file changes with StatReloader
+INFO 2021-05-19 12:39:59,534 autoreload 4032 15016 Watching for file changes with StatReloader
+INFO 2021-05-19 12:41:59,032 autoreload 4032 15016 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-19 12:42:01,018 autoreload 8560 5104 Watching for file changes with StatReloader
+INFO 2021-05-19 12:42:12,033 autoreload 8560 5104 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-19 12:42:13,824 autoreload 16428 11260 Watching for file changes with StatReloader
+INFO 2021-05-19 12:43:20,950 autoreload 16428 11260 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\urls.py changed, reloading.
+INFO 2021-05-19 12:43:22,576 autoreload 13844 6700 Watching for file changes with StatReloader
+INFO 2021-05-19 12:51:17,285 autoreload 6656 14172 Watching for file changes with StatReloader
+INFO 2021-05-19 12:55:04,283 autoreload 17732 9920 Watching for file changes with StatReloader
+INFO 2021-05-19 12:57:34,432 autoreload 17732 9920 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-18 14:09:15,031 basehttp 1568 12240 "GET /boards HTTP/1.1" 200 4445
+INFO 2021-05-18 14:09:17,031 basehttp 1568 12240 "GET /boards/1/ HTTP/1.1" 200 1926
+INFO 2021-05-18 14:09:17,156 basehttp 1568 12240 "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155764
+INFO 2021-05-18 14:09:17,531 basehttp 1568 12240 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-18 14:18:01,003 basehttp 1568 10068 "GET /boards/1/ HTTP/1.1" 200 1926
+INFO 2021-05-18 14:18:01,367 basehttp 1568 10068 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-18 14:35:57,867 autoreload 16960 14236 Watching for file changes with StatReloader
+INFO 2021-05-18 14:36:00,006 basehttp 16960 12240 "GET /boards/1/ HTTP/1.1" 200 2572
+INFO 2021-05-18 14:36:01,082 basehttp 16960 12240 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-18 14:36:09,340 basehttp 16960 588 "GET /boards HTTP/1.1" 200 4363
+INFO 2021-05-18 14:36:13,616 basehttp 16960 588 "GET /boards/1/ HTTP/1.1" 200 2572
+INFO 2021-05-18 14:36:14,386 basehttp 16960 588 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-18 14:36:15,909 basehttp 16960 588 "GET /boards/1/topics/1 HTTP/1.1" 200 2325
+WARNING 2021-05-18 14:36:16,254 basehttp 16960 588 "GET /static/img/bruker.png HTTP/1.1" 404 1668
+INFO 2021-05-18 14:36:16,748 basehttp 16960 15456 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-18 14:36:19,950 basehttp 16960 15456 "GET /boards/1/topics/1/reply/ HTTP/1.1" 302 0
+WARNING 2021-05-18 14:36:20,063 log 16960 15456 Not Found: /accounts/login/
+WARNING 2021-05-18 14:36:20,065 basehttp 16960 15456 "GET /accounts/login/?next=/boards/1/topics/1/reply/ HTTP/1.1" 404 6465
+INFO 2021-05-18 14:36:24,907 basehttp 16960 17468 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-18 14:36:26,772 basehttp 16960 17468 "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 625953
+INFO 2021-05-19 11:22:24,401 autoreload 5148 8956 Watching for file changes with StatReloader
+INFO 2021-05-19 11:22:28,017 basehttp 5148 9056 "GET / HTTP/1.1" 200 6405
+INFO 2021-05-19 11:22:28,090 basehttp 5148 9056 "GET /static/css/base.css HTTP/1.1" 200 3393
+INFO 2021-05-19 11:22:28,095 basehttp 5148 6436 "GET /static/css/home.css HTTP/1.1" 200 936
+WARNING 2021-05-19 11:22:28,523 basehttp 5148 6436 "GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+WARNING 2021-05-19 11:22:28,677 log 5148 9056 Not Found: /favicon.ico
+WARNING 2021-05-19 11:22:28,678 basehttp 5148 9056 "GET /favicon.ico HTTP/1.1" 404 6422
+INFO 2021-05-19 11:22:30,581 basehttp 5148 9056 "GET /Plans HTTP/1.1" 200 4926
+INFO 2021-05-19 11:22:30,674 basehttp 5148 9056 "GET /static/MatPlan/Planner.css HTTP/1.1" 200 2249
+INFO 2021-05-19 11:22:32,048 basehttp 5148 9056 "GET /Over HTTP/1.1" 200 7136
+INFO 2021-05-19 11:22:32,124 basehttp 5148 9056 "GET /static/MatPlan/over.css HTTP/1.1" 200 0
+INFO 2021-05-19 11:22:36,012 basehttp 5148 9056 "GET /Under HTTP/1.1" 200 7000
+INFO 2021-05-19 11:22:38,493 views 5148 9056 asaad
+INFO 2021-05-19 11:22:38,504 basehttp 5148 9056 "GET /dashboard HTTP/1.1" 200 5736
+INFO 2021-05-19 11:22:40,303 views 5148 9056 asaad
+INFO 2021-05-19 11:22:40,307 basehttp 5148 9056 "GET /dashboard HTTP/1.1" 200 5736
+INFO 2021-05-19 11:22:41,455 views 5148 9056 asaad
+INFO 2021-05-19 11:22:41,466 basehttp 5148 9056 "GET /workout HTTP/1.1" 200 6291
+INFO 2021-05-19 11:22:42,597 views 5148 9056 asaad
+INFO 2021-05-19 11:22:42,627 basehttp 5148 9056 "GET /workouts HTTP/1.1" 200 7977
+INFO 2021-05-19 11:22:44,639 views 5148 9056 asaad
+INFO 2021-05-19 11:22:44,642 basehttp 5148 9056 "GET /workout HTTP/1.1" 200 6291
+INFO 2021-05-19 11:22:45,831 views 5148 9056 asaad
+INFO 2021-05-19 11:22:45,835 basehttp 5148 9056 "GET /dashboard HTTP/1.1" 200 5736
+INFO 2021-05-19 11:22:47,012 views 5148 9056 asaad
+INFO 2021-05-19 11:22:47,015 basehttp 5148 9056 "GET /dashboard HTTP/1.1" 200 5736
+INFO 2021-05-19 11:22:48,073 basehttp 5148 9056 "GET /kalori HTTP/1.1" 200 11390
+INFO 2021-05-19 11:22:48,134 basehttp 5148 9056 "GET /static/css/kalori.css HTTP/1.1" 200 510
+INFO 2021-05-19 11:22:48,144 basehttp 5148 17020 "GET /static/js/kalori.js HTTP/1.1" 200 2694
+INFO 2021-05-19 11:22:52,366 basehttp 5148 17020 "GET /boards HTTP/1.1" 200 4632
+INFO 2021-05-19 11:22:54,225 basehttp 5148 17020 "GET /boards/1/ HTTP/1.1" 200 2572
+INFO 2021-05-19 11:22:54,290 basehttp 5148 17020 "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155764
+INFO 2021-05-19 11:22:56,269 basehttp 5148 17020 "GET /boards/1/topics/3 HTTP/1.1" 200 1537
+WARNING 2021-05-19 11:22:56,327 basehttp 5148 17020 "GET /static/img/bruker.png HTTP/1.1" 404 1668
+INFO 2021-05-19 11:22:59,761 basehttp 5148 9056 "GET /boards/1/topics/6 HTTP/1.1" 200 1541
+WARNING 2021-05-19 11:22:59,818 basehttp 5148 9056 "GET /static/img/bruker.png HTTP/1.1" 404 1668
+INFO 2021-05-19 11:25:29,267 autoreload 5148 8956 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-19 11:25:30,185 autoreload 2744 13180 Watching for file changes with StatReloader
+INFO 2021-05-19 11:26:59,906 autoreload 2744 13180 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\urls.py changed, reloading.
+INFO 2021-05-19 11:27:00,870 autoreload 18332 9656 Watching for file changes with StatReloader
+INFO 2021-05-19 11:28:11,569 autoreload 18332 9656 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-19 12:16:47,124 autoreload 1152 13096 Watching for file changes with StatReloader
+INFO 2021-05-19 12:18:16,201 basehttp 1152 12092 "GET / HTTP/1.1" 200 6405
+WARNING 2021-05-19 12:18:16,567 basehttp 1152 12092 "GET /static/img/fitx.PNG HTTP/1.1" 404 1662
+INFO 2021-05-19 12:18:18,638 basehttp 1152 12516 "GET /kalori HTTP/1.1" 200 11390
+INFO 2021-05-19 12:18:20,199 views 1152 12516 asaad
+INFO 2021-05-19 12:18:20,226 basehttp 1152 12516 "GET /dashboard HTTP/1.1" 200 5736
+INFO 2021-05-19 12:18:23,926 basehttp 1152 12516 "GET /password/ HTTP/1.1" 200 5003
+INFO 2021-05-19 12:18:27,709 basehttp 1152 12516 "GET /kalori HTTP/1.1" 200 11390
+INFO 2021-05-19 12:18:31,864 basehttp 1152 12516 "GET /user HTTP/1.1" 200 7350
+INFO 2021-05-19 12:24:54,548 autoreload 7076 11896 Watching for file changes with StatReloader
+INFO 2021-05-19 12:27:17,479 autoreload 15800 14624 Watching for file changes with StatReloader
+INFO 2021-05-19 12:36:27,190 autoreload 472 11136 Watching for file changes with StatReloader
+INFO 2021-05-19 12:39:42,359 autoreload 472 11136 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-19 12:39:44,179 autoreload 3184 11108 Watching for file changes with StatReloader
+INFO 2021-05-19 12:39:52,398 autoreload 3184 11108 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-19 12:39:54,046 autoreload 10412 5752 Watching for file changes with StatReloader
+INFO 2021-05-19 12:39:59,534 autoreload 4032 15016 Watching for file changes with StatReloader
+INFO 2021-05-19 12:41:59,032 autoreload 4032 15016 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-19 12:42:01,018 autoreload 8560 5104 Watching for file changes with StatReloader
+INFO 2021-05-19 12:42:12,033 autoreload 8560 5104 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
+INFO 2021-05-19 12:42:13,824 autoreload 16428 11260 Watching for file changes with StatReloader
+INFO 2021-05-19 12:43:20,950 autoreload 16428 11260 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\urls.py changed, reloading.
+INFO 2021-05-19 12:43:22,576 autoreload 13844 6700 Watching for file changes with StatReloader
+INFO 2021-05-19 12:51:17,285 autoreload 6656 14172 Watching for file changes with StatReloader
+INFO 2021-05-19 12:55:04,283 autoreload 17732 9920 Watching for file changes with StatReloader
+INFO 2021-05-19 12:57:34,432 autoreload 17732 9920 C:\Users\asaad\OneDrive\arbeid\FitxProsjekt\settings.py changed, reloading.
