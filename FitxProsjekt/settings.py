@@ -14,6 +14,7 @@ from pathlib import Path
 from django.utils.translation import gettext_lazy as _
 import django_heroku
 import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '$fp=f#2d&%ayr@v^%f!%5rqvc_6@d-jx-p_^*g@=x_j=*9q)r('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -89,7 +90,8 @@ DATABASES = {
         'PORT': '5432'
     }
 }
-
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -130,7 +132,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-STATICFILES_STORAGE ='whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 LOGOUT_REDIRECT_URL = 'khara'
 LOGIN_REDIRECT_URL = 'khara'
 

@@ -5,10 +5,9 @@ from django.contrib.auth import login, authenticate
 from django.contrib import messages  # access django's `messages` module.
 from django.contrib.auth.models import User
 from django.contrib.auth.views import PasswordChangeView
-from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth.forms import PasswordChangeForm, UserCreationForm
 from django.urls import reverse_lazy
 import logging
-
 
 from .forms import UserForm  # import UserForm and ProfileForm
 
@@ -16,16 +15,17 @@ from .forms import UserForm  # import UserForm and ProfileForm
 from accounts.forms import RegisterForm
 logger = logging.getLogger('django')
 
-'''
+
 def signup(request):
-    form = SignUpForm()
+    form = UserCreationForm()
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
+            login(request, user)
             return redirect('home')
     return render(request, 'signup.html', {'form': form})
-'''
+
 
 
 def user_register(request):
